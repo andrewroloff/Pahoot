@@ -278,9 +278,26 @@
 
         body.lockin .snoopy,
         body.lockin .honse,
-        body.lockin #settingsBtn {
+        body.lockin span.slider,
+        body.lockin span.mode-label,
+        body.lockin #fullscreenBtn,
+        body.lockin select#testSelect,
+        body.lockin div#streakMeter,
+        body.lockin img {
             display: none !important;
         }
+
+        body.lockin .answer {
+            background: white !important;
+            color: black important;
+        }
+
+
+        body.lockin #settingsBtn {
+            background: black !important;
+            color: white !important;
+        }
+
 
         body.lockin {
             background: #000;
@@ -609,7 +626,7 @@
                 <span class="slider"></span>
             </label>
 
-            <span id="mode-label">Endless</span>
+            <span class="mode-label">Endless</span>
 
             <label class="bubble-switch">
                 <input type="checkbox" id="hyperToggle">
@@ -672,6 +689,13 @@
         let currentDeck = DEFAULT_DECK;
         const MAX_STREAK_FOR_FULL = 10;
         const DECK_KEY = 'pahootDeck';
+        const SETTINGS_KEY = 'pahootSettings';
+        let settings = {
+            hideMascots: false,
+            hyperTime: 5,
+            darkMode: false,
+            lockinMode: false
+        };
 
         //dev_mode() function for loading the test deck
         window.dev_mode = function () {
@@ -748,18 +772,16 @@
         }
 
         function saveSettings() {
+            settings.hideMascots = document.getElementById('hideMascots').checked;
+            settings.hyperTime = document.getElementById('hyperTime').value;
+            settings.darkMode = document.getElementById('darkMode').checked;
+            settings.lockinMode = document.getElementById('lockinMode').checked
+            console.log(settings);
             localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
         }
 
 
-        const SETTINGS_KEY = 'pahootSettings';
 
-        let settings = {
-            hideMascots: false,
-            hyperTime: 3,
-            darkMode: false,
-            lockinMode: false
-        };
 
 
         document.getElementById('lockinMode').onchange = e => {
@@ -783,6 +805,7 @@
         document.getElementById('closeSettings').onclick = () => {
             playSound('toggleSound');
             document.getElementById('settingsOverlay').classList.add('hidden');
+            saveSettings();
         };
 
         document.getElementById('hideMascots').onchange = e => {
@@ -891,6 +914,7 @@
 
             const saved = localStorage.getItem(SETTINGS_KEY);
             if (saved) {
+                console.log(saved);
                 settings = JSON.parse(saved);
             }
             applySettings();
