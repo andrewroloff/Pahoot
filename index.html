@@ -614,7 +614,10 @@
         font-weight:bold;
         cursor:pointer;
         ">
-                <option selected value="questions/AnimalNutritionFinal.json">Animal Nutrition Final</option>
+                <option value="questions/AnimalNutritionFinal.json">Animal Nutrition Final</option>
+                <option selected value="questions/AnimalNutritionFinalFocused.json">Focused Animal Nutrition Final
+                </option>
+
             </select>
         </div>
 
@@ -685,13 +688,13 @@
         let hyperTimeLimit = 3;
         let timerInterval = null;
         let lockinMode = false;
-        const DEFAULT_DECK = 'questions/AnimalNutritionFinal.json';
+        const DEFAULT_DECK = 'questions/AnimalNutritionFinalFocused.json';
         let currentDeck = DEFAULT_DECK;
         const MAX_STREAK_FOR_FULL = 10;
         const DECK_KEY = 'pahootDeck';
         const SETTINGS_KEY = 'pahootSettings';
         let settings = {
-            hideMascots: false,
+            hideMascots: true,
             hyperTime: 5,
             darkMode: false,
             lockinMode: false
@@ -1042,7 +1045,7 @@
             setTimeout(() => {
                 current++;
                 showQuestion();
-            }, isCorrect ? 4000 : 1000);
+            }, isCorrect ? 3000 : 1000);
         }
 
         function showWrong(correctAnswer) {
@@ -1078,7 +1081,7 @@
             }
 
             container.appendChild(overlay);
-            setTimeout(() => overlay.remove(), 4000);
+            setTimeout(() => overlay.remove(), 3000);
         }
 
         loadQuestions();

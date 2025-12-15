@@ -1,0 +1,382 @@
+[
+    {
+        "question": "What is homeostasis?",
+        "choices": [
+            "Self-regulation of cell and organ function",
+            "External regulation of cell/organ function",
+            "Diet based regulation of cells",
+            "External environment based regulation of cells"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is homeorhesis",
+        "choices": [
+            "Complementary function to homeostasis",
+            "Orchestrated and coordinated control in the metabolism of body tissues",
+            "Method of digestion",
+            "The way cows produce milk"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "What are the major roles of insulin in metabolism?",
+        "choices": [
+            "Increases blood glucose by promoting glycogen breakdown and gluconeogenesis",
+            "Primarily stimulates fat breakdown and ketone body production",
+            "Stimulates glucose uptake by cells, promotes glycogen and fat synthesis, and inhibits protein breakdown",
+            "Enhances calcium absorption and bone mineralization"
+        ],
+        "correct": 2
+    },
+    {
+        "question": "Describe how insulin resistance is a homeorhetic response to giving birth in mammals. Why and how does this occur?",
+        "choices": [
+            "After parturition, tissues like muscle become less sensitive to insulin, redirecting glucose to the mammary gland for milk production",
+            "Insulin resistance after birth occurs to prevent fat mobilization, conserving maternal energy stores",
+            "Insulin sensitivity increases after birth to promote fat deposition in the mother",
+            "Insulin resistance occurs to reduce milk production and redirect nutrients to the uterus"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the etiology of ketosis and fatty liver in dairy cows and sheep?",
+        "choices": [
+            "Excessive dietary protein intake causes liver overload and ketone formation",
+            "Low fiber intake reduces rumen motility, directly causing ketosis",
+            "High calcium diets interfere with glucose metabolism, leading to fatty liver",
+            "Negative energy balance around parturition leads to excessive mobilization of body fat, resulting in high blood ketones and fat accumulation in the liver"
+        ],
+        "correct": 3
+    },
+    {
+        "question": "How does glucagon alter metabolism?",
+        "choices": [
+            "Inhibits lipolysis and promotes protein deposition in tissues",
+            "Stimulates glycogen breakdown, gluconeogenesis, and fat mobilization to increase blood glucose",
+            "Enhances calcium absorption in the gut and bone mineralization",
+            "Promotes glucose uptake by muscle and fat, stimulating glycogen and fat synthesis"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "How do glucocorticoids affect metabolism?",
+        "choices": [
+            "Primarily increase calcium absorption and bone mineralization",
+            "Stimulate insulin secretion and glucose uptake into muscle and fat",
+            "Enhance fat deposition and inhibit protein catabolism",
+            "Promote protein breakdown, gluconeogenesis, and lipolysis to increase circulating energy substrates"
+        ],
+        "correct": 3
+    },
+    {
+        "question": "Name one major glucocorticoid.",
+        "choices": [
+            "Thyroxine",
+            "Cortisol",
+            "Insulin",
+            "Glucagon"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "What is another name for somatotropin? How does it affect metabolism?",
+        "choices": [
+            "Cortisol; increases gluconeogenesis",
+            "Growth hormone; stimulates protein synthesis and fat mobilization",
+            "Insulin; promotes glucose uptake",
+            "Glucagon; increases glycogenolysis"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "Which hormone is responsible for increasing the secretion of IGF-1?",
+        "choices": [
+            "Glucagon",
+            "Thyroxine",
+            "Growth hormone",
+            "Cortisol"
+        ],
+        "correct": 2
+    },
+    {
+        "question": "Which hormones are responsible for setting basal metabolic rate?",
+        "choices": [
+            "Thyroid hormones (T3 and T4)",
+            "Insulin and glucagon",
+            "Cortisol and aldosterone",
+            "Growth hormone and IGF-1"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the two major catecholamines? What is their role in metabolism? Which feed additive is an agonist for catecholamines?",
+        "choices": [
+            "Epinephrine and norepinephrine; mobilize glucose and fat; ractopamine",
+            "Insulin and glucagon; regulate blood glucose; monensin",
+            "Cortisol and aldosterone; stress response; melatonin",
+            "Thyroxine and T3; set basal metabolism; clenbuterol"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define hunger, satiety, and satiation",
+        "choices": [
+            "Hunger: desire to eat; Satiety: feeling full after meal; Satiation: meal-ending signal",
+            "Hunger: fullness; Satiety: desire to eat; Satiation: continuous eating",
+            "Hunger: hormone secretion; Satiety: rumen fill; Satiation: taste sensation",
+            "Hunger: feed preference; Satiety: energy deficit; Satiation: fat deposition"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "From an animal standpoint, what is generally the major factor driving feed intake (which nutrient)?",
+        "choices": [
+            "Carbohydrates",
+            "Protein",
+            "Fat",
+            "Minerals"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "Which region of the brain integrates feed intake signals to regulate hunger and satiety?",
+        "choices": [
+            "Medulla oblongata",
+            "Hypothalamus",
+            "Cerebellum",
+            "Pituitary gland"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "What are the major animal/production factors that regulate feed intake? How do each of them affect intake?",
+        "choices": [
+            "Age, body size, production level; larger or higher-producing animals eat more",
+            "Color, breed, housing; animals in blue pens eat more",
+            "Water source, tail length, activity; more active animals eat less",
+            "Rumen pH, fat intake, fiber type; all decrease intake"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "How do heat stress and cold stress affect feed intake?",
+        "choices": [
+            "Heat stress increases feed intake; cold stress decreases intake",
+            "Heat stress decreases feed intake; cold stress increases intake",
+            "Both heat and cold stress increase feed intake",
+            "Both heat and cold stress decrease feed intake"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "How do gut fill, SCFA, blood glucose, digest pH, and digesta osmolarity impact feed intake?",
+        "choices": [
+            "Gut fill and SCFA decrease intake; high glucose, low pH, and high osmolarity generally decrease intake",
+            "Gut fill and SCFA increase intake; high glucose and low osmolarity increase intake",
+            "Only blood glucose affects intake; all others have no effect",
+            "Digest pH and osmolarity increase intake; SCFA decreases intake; others neutral"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Where are insulin, glucagon, and amylin secreted? How do each of them affect feed intake?",
+        "choices": [
+            "Pancreas; insulin decreases intake, glucagon increases intake, amylin decreases intake",
+            "Liver; all increase feed intake",
+            "Adipose tissue; insulin increases intake, glucagon decreases intake, amylin neutral",
+            "Hypothalamus; all decrease intake"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 3 gut peptides that reduce feed intake. Name 1 gut peptide that increases feed intake",
+        "choices": [
+            "GLP-1, PYY, CCK reduce intake; ghrelin increases intake",
+            "Ghrelin, leptin, insulin reduce intake; CCK increases intake",
+            "GLP-2, amylin, leptin reduce intake; insulin increases intake",
+            "PYY, ghrelin, CCK reduce intake; GLP-1 increases intake"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 2 adipokines. How do each of them affect feed intake? In general, what is their role in regulation of weight balance?",
+        "choices": [
+            "Insulin and glucagon increase intake; regulate protein balance",
+            "Leptin decreases intake, adiponectin slightly decreases intake; regulate energy balance",
+            "Cortisol and ghrelin decrease intake; regulate stress response",
+            "Thyroxine and T3 increase intake; regulate basal metabolic rate"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "Name 6 reasons why land would be used for grazing as opposed to crop production?",
+        "choices": [
+            "High rainfall, high labor, poor biodiversity, intensive crop yield, soil erosion, pest resistance",
+            "High nutrient soil, irrigated fields, monoculture preference, mechanization, pesticide use, crop rotation",
+            "Unsuitable soil for crops, low rainfall, low labor, cost-effective, preserve biodiversity, ruminant adaptation",
+            "Land far from markets, poor roads, high fertilizer cost, low feed demand, animal preference, pasture weeds"
+        ],
+        "correct": 3
+    },
+    {
+        "question": "How does the nutrient composition of pastures change across the growing season?",
+        "choices": [
+            "Protein decreases, fiber increases, energy decreases as season progresses",
+            "Protein increases, fiber decreases, energy increases",
+            "No change; pasture composition is stable throughout",
+            "Only mineral content changes; protein and energy stay constant"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the difference between intensive and extensive grazing?",
+        "choices": [
+            "Intensive: high stocking density, frequent rotation; Extensive: low density, large areas",
+            "Intensive: low density, large areas; Extensive: high density, frequent rotation",
+            "Intensive: mechanized feeding; Extensive: hand-feeding",
+            "No difference; terms are interchangeable"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define deferment, rest, and rotation, in the context of grazing",
+        "choices": [
+            "Deferment: early grazing; Rest: feed restriction; Rotation: constant pasture use",
+            "Deferment: delay grazing; Rest: allow recovery; Rotation: move livestock among pastures",
+            "Deferment: fertilize pasture; Rest: mow pasture; Rotation: plant crops",
+            "All are types of feed supplements"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "Name 6 common nutritional diseases associated with grazing and give 1 symptom of each",
+        "choices": [
+            "Bloat (distended rumen), grass tetany (muscle tremors), nitrate poisoning (labored breathing), copper deficiency (anemia), selenium deficiency (white muscle disease), vitamin A deficiency (blindness)",
+            "Bloat (weight gain), grass tetany (fat deposition), nitrate poisoning (increased appetite), copper deficiency (diarrhea), selenium deficiency (coughing), vitamin A deficiency (hyperactivity)",
+            "All grazing diseases are caused by water shortage; no specific symptoms",
+            "Bloat, tetany, nitrate poisoning, copper and selenium deficiency, vitamin D deficiency; all cause hair loss"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Why is rotational grazing done?",
+        "choices": [
+            "Maintain pasture quality, improve regrowth, control parasites, optimize forage utilization",
+            "Increase stocking density, reduce pasture recovery, minimize labor",
+            "Prevent animal exercise, reduce feed intake, increase feed wastage",
+            "Only to control weeds; has no effect on forage quality"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 4 different grazing strategies that can be used to maintain pasture quality",
+        "choices": [
+            "Continuous, rotational, strip, mob grazing",
+            "Dry lot, free choice, feedlot, pasture cut-and-carry",
+            "Zero grazing, mechanized mowing, hydroponic, silage feeding",
+            "Hand feeding, confined grazing, tethering, hay supplementation"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define utilization in the context of forage consumption.",
+        "choices": [
+            "Proportion of feed wasted during harvest",
+            "Rate of nutrient absorption in the small intestine",
+            "Total forage grown per hectare",
+            "Proportion of forage actually consumed by animals compared to what is available"
+        ],
+        "correct": 3
+    },
+    {
+        "question": "Define harvest efficiency in the context of forage consumption.",
+        "choices": [
+            "Percentage of forage harvested or grazed compared to total growth",
+            "Percentage of protein absorbed from feed",
+            "Rate of milk production per kg of feed",
+            "Amount of forage lost to weather or pests"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "List the top 5 major export markets for U.S. animal feed.",
+        "choices": [
+            "China, Brazil, Germany, India, Australia",
+            "UK, France, Spain, Italy, Netherlands",
+            "Mexico, Canada, South Korea, Japan, Vietnam",
+            "Russia, Saudi Arabia, Argentina, Chile, South Africa"
+        ],
+        "correct": 2
+    },
+    {
+        "question": "Which specific feed ingredient is the primary driver of the price of all energy ingredients? What about for protein ingredients?",
+        "choices": [
+            "Wheat for energy, canola meal for protein",
+            "Corn for energy, soybean meal for protein",
+            "Barley for energy, fish meal for protein",
+            "Oats for energy, sunflower meal for protein"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "List the 3 different channels of feed distribution.",
+        "choices": [
+            "Direct to farm, through cooperatives, through commercial feed companies",
+            "Farmer markets, road vendors, online delivery",
+            "Grocery stores, restaurants, feedlots",
+            "Seed suppliers, fertilizer dealers, silage processors"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "List 7 factors that influence the nutrient requirements of animals.",
+        "choices": [
+            "Species, breed, age, sex, body weight, physiological state, environment",
+            "Color, tail length, ear shape, horn size, behavior, feed flavor, pasture color",
+            "Housing type, milking frequency, pen size, stocking density, water source, light exposure, bedding",
+            "Feed brand, storage method, grinding size, pellet shape, feed color, aroma, price"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define the following terms: minimum requirements, recommended daily allowance (RDA), estimated average requirements (EAR), and tolerable upper intake level.",
+        "choices": [
+            "Min req: lowest intake for health; RDA: meets 97–98% population; EAR: meets 50%; UL: max safe intake",
+            "Min req: maximum intake; RDA: average intake; EAR: lowest intake; UL: typical intake",
+            "Min req: feed cost; RDA: feed efficiency; EAR: growth rate; UL: toxicity",
+            "All terms refer to protein content only; no standard definitions"
+        ],
+        "correct": 3
+    },
+    {
+        "question": "What are the differences between empirical and mechanistic nutritional models? What purpose would each be used for?",
+        "choices": [
+            "Empirical: data-based, predict outcomes; Mechanistic: process-based, simulate metabolism",
+            "Empirical: simulates rumen microbes; Mechanistic: predicts weather effects",
+            "Empirical: for crop yield; Mechanistic: for pasture height",
+            "No difference; terms are interchangeable"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the difference between a steady state model and a dynamic model?",
+        "choices": [
+            "Steady state: used for feedlot; Dynamic: used for grazing only",
+            "Steady state: assumes constant conditions; Dynamic: accounts for changes over time",
+            "Steady state: predicts animal behavior; Dynamic: predicts pasture growth",
+            "No difference; both assume constant conditions"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "What does LCA stand for in the context of environmental models?",
+        "choices": [
+            "Long-term Carbon Analysis",
+            "Livestock Carbon Accounting",
+            "Life Cycle Assessment",
+            "Land Crop Allocation"
+        ],
+        "correct": 2
+    }
+]
