@@ -1208,8 +1208,6 @@ background: #0B486B;
                 JSON.stringify(unlockedThemes)
             )
 
-            console.log(unlockedThemes);
-
             renderAchievementTicker();
 
             if (!hyperMode) {
@@ -1430,9 +1428,6 @@ background: #0B486B;
             if (themes) {
                 console.log(themes);
                 for (let value in themes) {
-                    console.log(value);
-                    console.log(ACHIEVEMENT_THEMES);
-                    console.log(ACHIEVEMENT_THEMES.value)
                     const themeOption = document.createElement('option');
                     themeOption.innerText = ACHIEVEMENT_THEMES[value];
                     document.getElementById("themeSelect").appendChild(themeOption);
