@@ -49,6 +49,42 @@
             color: #00ff88;
         }
 
+        #hud {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            opacity: 0.85;
+            margin-bottom: 10px;
+        }
+
+        #hudMeters {
+            display: flex;
+            gap: 6px;
+        }
+
+        .mini {
+            width: 40px;
+            height: 6px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .mini::after {
+            content: "";
+            display: block;
+            height: 100%;
+            width: var(--fill, 0%);
+        }
+
+        .mini.brain::after {
+            background: linear-gradient(90deg, #00ffcc, #ff0066);
+        }
+
+        .mini.streak::after {
+            background: linear-gradient(5deg, #0B486B, #F56217);
+        }
 
         #achievementTicker {
             position: fixed;
@@ -415,7 +451,6 @@
         body.lockin span.slider,
         body.lockin span.mode-label,
         body.lockin #fullscreenBtn,
-        body.lockin select#testSelect,
         body.lockin div#streakMeter,
         body.lockin img {
             display: none !important;
@@ -452,13 +487,6 @@
             text-align: center;
             margin-bottom: 10px;
             font-size: 3rem;
-        }
-
-        .tracker {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 14px;
-            opacity: 0.9;
         }
 
         .question {
@@ -632,7 +660,7 @@
 
         /* Checked state */
         .bubble-switch input:checked+.slider::before {
-            transform: translateX(36px);
+            transform: translateX(22px);
         }
 
         button.answer:active {
@@ -704,7 +732,7 @@
         </button>
     </div>
 </div>
-<div id="quizTypeOverlay" class="overlay hidden">
+<div id="controlDrawer" class="overlay hidden">
     <div style="
     background:#111;
     padding:30px;
@@ -713,11 +741,11 @@
     text-align:left;
     font-size:14px;
   ">
-        <h2 style="text-align:center;margin-top:0;">Quiz Type</h2>
+        <h2 style="text-align:center;margin-top:0;">Game Controls</h2>
 
         <label>
-            Answer Mode
-            <select id="answerTypeSelect" style="
+            Deck
+            <select id="drawerDeckSelect" style="
         width:100%;
         padding:10px;
         margin-top:6px;
@@ -725,22 +753,73 @@
         border:none;
         font-weight:bold;
       ">
-                <option selected value="mc">Multiple Choice</option>
-                <option value="typed">Type Answer</option>
-                <option value="tf">True / False</option>
+                <!-- populated by JS -->
             </select>
         </label>
 
         <br><br>
 
-        <button id="closeQuizType" style="
+        <hr style="opacity:0.2;margin:16px 0;">
+
+        <div style="font-weight:bold;margin-bottom:6px;">Question Types</div>
+
+        <label>
+            <input type="checkbox" id="typeMC" checked>
+            Multiple Choice
+        </label><br>
+
+        <label>
+            <input type="checkbox" id="typeTyped">
+            Typed Answer
+        </label><br>
+
+        <label>
+            <input type="checkbox" id="typeTF">
+            True / False
+        </label>
+
+
+        <div class="mode-toggle">
+            <span class="mode-label">Normal</span>
+
+            <label class="bubble-switch">
+                <input type="checkbox" id="drawerEndlessToggle">
+                <span class="slider"></span>
+            </label>
+
+            <span class="mode-label">Endless</span>
+
+            <label class="bubble-switch">
+                <input type="checkbox" id="drawerHyperToggle">
+                <span class="slider"></span>
+            </label>
+
+            <span class="mode-label">Hyper</span>
+        </div>
+
+        <br>
+
+        <button id="drawerFullscreenBtn" style="
       width:100%;
       padding:10px;
       border:none;
       border-radius:999px;
-background: #0B486B;
-            background: linear-gradient(5deg,
-                    #0B486B, #F56217);      cursor:pointer;
+      background:linear-gradient(5deg,#0B486B,#F56217);
+      font-weight:bold;
+      cursor:pointer;
+    ">
+            ⛶ Fullscreen
+        </button>
+
+        <br><br>
+
+        <button id="closeDrawer" style="
+      width:100%;
+      padding:10px;
+      border:none;
+      border-radius:999px;
+      background:linear-gradient(45deg,#ff00ff,#00ffff);
+      cursor:pointer;
     ">
             Done
         </button>
@@ -787,7 +866,7 @@ background: #0B486B;
         color:black;">
             ⚙️
         </button>
-        <button id="quizTypeBtn" style="
+        <button id="drawerBtn" style="
   position:absolute;
   top:16px;
   left:16px;
@@ -795,12 +874,13 @@ background: #0B486B;
   border-radius:50%;
   width:42px;
   height:42px;
-  font-size:18px;
+  font-size:20px;
   cursor:pointer;
-  background: linear-gradient(5deg,#0B486B,#F56217);
+  background:linear-gradient(5deg,#0B486B,#F56217);
 ">
-            📝
+            ☰
         </button>
+
         <button id="retryMissedBtn" class="hidden" style="
   width:100%;
   padding:10px;
@@ -814,80 +894,14 @@ background: #0B486B;
             🔁 Retry Missed Questions
         </button>
 
-
-        <div class="tracker" id="tracker">Question 1 | Score: 0</div>
-        <div id="streakMeter" style="
-    height: 10px;
-    width: 100%;
-    background: rgba(255,255,255,0.1);
-    border-radius: 999px;
-    overflow: hidden;
-    margin-bottom: 12px;
-            ">
-            <div id="streakFill" style="
-        height: 100%;
-        width: 0%;
-        background: #0B486B;
-            background: linear-gradient(5deg,
-                    #0B486B, #F56217);
-        transition: width 0.3s ease;
-            "></div>
+        <div id="hud">
+            <span id="hudLeft">Q 1 • 0 pts</span>
+            <div id="hudMeters">
+                <div class="mini brain"></div>
+                <div class="mini streak"></div>
+            </div>
+            <span id="timer" class="hidden">⏱ 3.0</span>
         </div>
-        <div class="tracker hidden" id="timer">⏱ 3.0</div>
-        <div style="margin-bottom:14px; text-align:center;">
-            <select id="testSelect" style="
-        width:100%;
-        padding:10px;
-        border-radius:999px;
-        border:none;
-        background:linear-gradient(5deg,#0B486B,#F56217);
-        font-weight:bold;
-        cursor:pointer;
-        ">
-                <option value="questions/AnimalNutritionFinal.json">Animal Nutrition Final</option>
-                <option value="questions/AnimalNutritionFinalFocused.json">Focused Animal Nutrition Final
-                </option>
-                <option selected value="questions/AnimalNutritionFinalFocused2.json">Best Animal Nutrition Final Study
-                    Deck</option>
-
-            </select>
-        </div>
-
-        <div class="mode-toggle">
-            <span class="mode-label">Normal</span>
-
-            <label class="bubble-switch">
-                <input type="checkbox" id="endlessToggle">
-                <span class="slider"></span>
-            </label>
-
-            <span class="mode-label">Endless</span>
-
-            <label class="bubble-switch">
-                <input type="checkbox" id="hyperToggle">
-                <span class="slider"></span>
-            </label>
-
-            <span class="mode-label">Hyper</span>
-
-
-        </div>
-
-        <button id="fullscreenBtn" style="
-        margin: 10px auto;
-        display: block;
-        padding: 8px 20px;
-        border-radius: 999px;
-        border: none;
-        background: #0B486B;
-        background: linear-gradient(5deg,
-        #0B486B, #F56217);
-        color: black;
-        font-weight: bold;
-        cursor: pointer;">
-            ⛶ FULLSCREEN
-        </button>
-
 
         <div class="question" id="question">Loading...</div>
         <div class="answers">
@@ -936,16 +950,41 @@ background: #0B486B;
         let lockinMode = false;
         const DEFAULT_DECK = 'questions/AnimalNutritionFinalFocused2.json';
         let currentDeck = DEFAULT_DECK;
+        const DECKS = [
+            {
+                label: "Best Animal Nutrition Final Study Deck",
+                value: "questions/AnimalNutritionFinalFocused2.json"
+            },
+            {
+                label: "Animal Nutrition Final",
+                value: "questions/AnimalNutritionFinal.json"
+            },
+            {
+                label: "Focused Animal Nutrition Final",
+                value: "questions/AnimalNutritionFinalFocused.json"
+            }
+        ];
+
         const MAX_STREAK_FOR_FULL = 10;
         let quizMode = 'normal';      // normal | endless | hyper
-        let answerType = 'mc';       // mc | typed | tf
+        let answerTypeConfig = {
+            mc: true,
+            typed: false,
+            tf: false
+        };
         let wrongQuestions = [];
-
         let answerBias = {
             indexCount: [0, 0, 0, 0],
             correctCount: 0,
             totalAnswers: 0
         };
+        let cognitiveLoad = 0; // 0–100
+        let answerStartTime = 0;
+        let recentResults = []; // true/false history
+        let sessionStart = Date.now();
+
+        const LOAD_DECAY = 0.92; // recovery rate
+
 
 
         const ACHIEVEMENTS = {
@@ -988,6 +1027,11 @@ background: #0B486B;
                 desc: "Broke an answer-selection habit",
                 icon: "🧠",
                 color: "Cyan"
+            },
+            eepy: {
+                title: "You should get some rest",
+                desc: "Go to bed",
+                icon: "😴"
             }
         };
         const ACHIEVEMENT_THEMES = {
@@ -1014,40 +1058,29 @@ background: #0B486B;
         };
 
         let unlockedAchievements = JSON.parse(localStorage.getItem(ACHIEVEMENTS_KEY)) || {};
-        let unlockedThemes = JSON.parse(localStorage.getItem(THEMES_KEY)) || [];
+        let unlockedThemes = JSON.parse(localStorage.getItem(THEMES_KEY)) || {};
 
         //dev_mode() function for loading the test deck
         window.dev_mode = function () {
             const TEST_DECK = 'test.json';
 
             console.warn('⚠️ DEV MODE ENABLED');
-            console.log('Loading test deck:', TEST_DECK);
-
             unlockAchievement('dev_mode');
 
             currentDeck = TEST_DECK;
 
-            // Reset modes
             endlessMode = true;
             hyperMode = false;
-            document.getElementById('endlessToggle').checked = false;
-            document.getElementById('hyperToggle').checked = false;
             document.body.classList.remove('hypermode');
 
-            // Reset game state
             current = 0;
             score = 0;
             streak = 0;
             updateStreakMeter();
 
-            // Sync dropdown if it exists
-            const deckSelect = document.getElementById('testSelect');
-            if (deckSelect) {
-                deckSelect.value = currentDeck;
-            }
-
-            // Load deck
+            syncDrawerUI();
             loadQuestions(currentDeck);
+            updateHUD();
         };
 
         window.dev_CLR_ACHIEVE = function () {
@@ -1058,6 +1091,180 @@ background: #0B486B;
         }
 
         // Helpers
+
+        function endQuiz() {
+            if (wrongQuestions.length === 0) {
+                unlockAchievement('perfect_deck');
+            }
+
+            playSound('endSound');
+            document.querySelector('.answers').classList.add('hidden');
+            document.getElementById('question').textContent = 'Quiz Finished!';
+            document.getElementById('hudLeft').classList.add('hidden');
+            document.getElementById('hudMeters').classList.add('hidden');
+
+            const result = document.getElementById('result');
+            result.textContent = `Final Score: ${score} / ${questions.length}`;
+            result.classList.remove('hidden');
+
+            document.getElementById('retryMissedBtn').classList.toggle(
+                'hidden',
+                wrongQuestions.length === 0
+            );
+        }
+
+
+        function resetGame({ resetScore = true } = {}) {
+            current = 0;
+            streak = 0;
+
+            if (resetScore) score = 0;
+
+            wrongQuestions = [];
+            updateStreakMeter();
+            updateHUD();
+        }
+
+
+        function applyTheme(theme) {
+            // Remove ONLY achievement themes
+            Object.values(ACHIEVEMENT_THEMES).forEach(t =>
+                document.body.classList.remove(t)
+            );
+
+            if (theme && theme !== 'default') {
+                document.body.classList.add(theme);
+            }
+        }
+
+
+        function renderThemeOptions() {
+            const select = document.getElementById("themeSelect");
+            if (!select) return;
+
+            select.innerHTML = '<option value="default">Default</option>';
+
+            Object.keys(unlockedThemes || {}).forEach(themeClass => {
+                const opt = document.createElement("option");
+                opt.value = themeClass;
+                opt.textContent = themeClass
+                    .replace('theme-', '')
+                    .replace(/-/g, ' ')
+                    .toUpperCase();
+                select.appendChild(opt);
+            });
+
+            select.value = settings.theme || "default";
+        }
+
+
+        function updateHUD() {
+            const hudLeft = document.getElementById('hudLeft');
+            if (!hudLeft) return;
+
+            const qNum = endlessMode
+                ? `Endless`
+                : `Q ${Math.min(current + 1, questions.length)}/${questions.length}`;
+
+            hudLeft.textContent = `${qNum} • ${score} pts`;
+        }
+
+
+        function syncQuestionTypeUI() {
+            document.getElementById('typeMC').checked = answerTypeConfig.mc;
+            document.getElementById('typeTyped').checked = answerTypeConfig.typed;
+            document.getElementById('typeTF').checked = answerTypeConfig.tf;
+        }
+
+        ['typeMC', 'typeTyped', 'typeTF'].forEach(id => {
+            document.getElementById(id).onchange = () => {
+                answerTypeConfig.mc = document.getElementById('typeMC').checked;
+                answerTypeConfig.typed = document.getElementById('typeTyped').checked;
+                answerTypeConfig.tf = document.getElementById('typeTF').checked;
+
+                // prevent all-off state
+                if (!getActiveAnswerTypes().length) {
+                    answerTypeConfig.mc = true;
+                    document.getElementById('typeMC').checked = true;
+                }
+            };
+        });
+
+
+        function getActiveAnswerTypes() {
+            return Object.entries(answerTypeConfig)
+                .filter(([_, enabled]) => enabled)
+                .map(([type]) => type);
+        }
+
+        function pickAnswerType() {
+            const types = getActiveAnswerTypes();
+            if (types.length === 0) return 'mc'; // safety fallback
+            if (streak >= 6 && answerTypeConfig.typed) return 'typed';
+            if (streak >= 4 && answerTypeConfig.tf) return 'tf';
+            return types[Math.floor(Math.random() * types.length)];
+        }
+
+
+        function updateCognitiveLoad(isCorrect) {
+            const now = performance.now();
+            const responseTime = (now - answerStartTime) / 1000;
+
+            // Decay previous load slightly
+            cognitiveLoad *= LOAD_DECAY;
+
+            // Slow answers increase load
+            if (responseTime > 4) cognitiveLoad += (responseTime - 4) * 4;
+
+            // Wrong answers spike load
+            if (!isCorrect) cognitiveLoad += 12;
+
+            // Track recent answers
+            recentResults.push(isCorrect);
+            if (recentResults.length > 6) recentResults.shift();
+
+            // Error clustering
+            const recentWrong = recentResults.filter(r => !r).length;
+            if (recentWrong >= 3) cognitiveLoad += 10;
+
+            // Long session pressure
+            const minutesPlayed = (Date.now() - sessionStart) / 60000;
+            if (minutesPlayed > 15) cognitiveLoad += 0.5;
+
+            // Clamp
+            cognitiveLoad = Math.min(100, Math.max(0, cognitiveLoad));
+
+            applyCognitiveEffects();
+        }
+
+        function applyCognitiveEffects() {
+            // Visual cue (subtle)
+            document.body.style.filter =
+                `saturate(${1 - cognitiveLoad / 200})
+         brightness(${1 - cognitiveLoad / 300})`;
+
+            // pre cleanup logic
+            // document.getElementById('brainFill').style.width =
+            //     `${cognitiveLoad}%`;
+            document.querySelector('.mini.brain').style.setProperty('--fill', cognitiveLoad + '%');
+
+            // Hypermode mercy
+            if (hyperMode && cognitiveLoad > 75) {
+                hyperTimeLimit += 0.5;
+            }
+
+            // Soft warning (no modal spam)
+            if (cognitiveLoad > 85 && !hyperMode && !document.getElementById('hudLeft').textContent.includes('FATIGUE')) {
+                document.getElementById('hudLeft').textContent += ' • 🧠 FATIGUE';
+                unlockAchievement('eepy')
+            }
+
+            // Lock-in override (optional)
+            if (settings.lockinMode && cognitiveLoad > 90) {
+                document.body.classList.remove('lockin');
+            }
+        }
+
 
         function showBiasWarning(bias) {
             const msgs = [
@@ -1173,61 +1380,42 @@ background: #0B486B;
                 ach.color ? `0 0 40px ${ach.color}` : '0 0 40px gold';
             document.querySelector('.quiz-container').appendChild(popup);
 
-            setTimeout(() => popup.remove(), 2200);
+            setTimeout(() => popup.remove(), 3500);
         }
 
 
 
         function unlockAchievement(id) {
-            const theme = ACHIEVEMENT_THEMES[id];
-            if (theme) {
-                document.body.classList.add(theme);
-                localStorage.setItem('pahootThemeSet', theme);
-            }
-            const themeOption = document.createElement('option');
-            themeOption.innerText = theme;
-            document.getElementById("themeSelect").appendChild(themeOption);
-
-
-            const ach = ACHIEVEMENTS[id];
-            if (!ach) {
-                console.warn('Unknown achievement:', id);
-                return;
-            }
-
             if (unlockedAchievements[id]) return;
 
+            const ach = ACHIEVEMENTS[id];
+            if (!ach) return;
+
             unlockedAchievements[id] = true;
-            localStorage.setItem(
-                ACHIEVEMENTS_KEY,
-                JSON.stringify(unlockedAchievements)
-            );
-            unlockedThemes[id] = true;
-            localStorage.setItem(
-                THEMES_KEY,
-                JSON.stringify(unlockedThemes)
-            )
+            localStorage.setItem(ACHIEVEMENTS_KEY, JSON.stringify(unlockedAchievements));
+
+            const theme = ACHIEVEMENT_THEMES[id];
+            if (theme) {
+                unlockedThemes[theme] = true;
+                localStorage.setItem(THEMES_KEY, JSON.stringify(unlockedThemes));
+
+                settings.theme = theme;
+                localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
+
+                applyTheme(theme);
+                renderThemeOptions(); // 🔥 THIS WAS MISSING
+            }
 
             renderAchievementTicker();
-
-            if (!hyperMode) {
-                showAchievementPopup(ach);
-            }
+            if (!hyperMode) showAchievementPopup(ach);
         }
 
 
 
 
-        function updateStreakMeter() {
-            const fill = document.getElementById('streakFill');
-            const percent = Math.min(100, (streak / MAX_STREAK_FOR_FULL) * 100);
-            fill.style.width = percent + '%';
 
-            if (hyperMode && streak >= 5) {
-                fill.style.boxShadow = `0 0 ${10 + streak * 2}px #ff00ff`;
-            } else {
-                fill.style.boxShadow = 'none';
-            }
+        function updateStreakMeter() {
+            document.querySelector('.mini.streak').style.setProperty('--fill', streak / 10 * 100 + '%');
         }
 
         function applySettings() {
@@ -1252,12 +1440,10 @@ background: #0B486B;
             const ticker = document.getElementById('achievementTicker');
             ticker.classList.toggle('hidden', settings.hideAchievements);
 
-            // Theme
-            if (settings.theme != "default") {
-                document.body.classList.add(settings.theme);
-            } else {
-                document.body.classList = "";
-            }
+            // Themes
+            applyTheme(settings.theme);
+
+
 
 
             // Sync UI
@@ -1298,9 +1484,10 @@ background: #0B486B;
             document.getElementById('settingsOverlay').classList.remove('hidden');
         };
 
-        document.getElementById('quizTypeBtn').onclick = () => {
+        document.getElementById('drawerBtn').onclick = () => {
             playSound('toggleSound');
-            document.getElementById('quizTypeOverlay').classList.remove('hidden');
+            syncDrawerUI();
+            document.getElementById('controlDrawer').classList.remove('hidden');
         };
 
         document.getElementById('closeSettings').onclick = () => {
@@ -1309,26 +1496,14 @@ background: #0B486B;
             saveSettings();
         };
 
-        document.getElementById('closeQuizType').onclick = () => {
+        document.getElementById('closeDrawer').onclick = () => {
             playSound('toggleSound');
-            answerType = document.getElementById('answerTypeSelect').value;
-            localStorage.setItem('pahootAnswerType', answerType);
-            document.getElementById('quizTypeOverlay').classList.add('hidden');
-            showQuestion();
+            document.getElementById('controlDrawer').classList.add('hidden');
         };
 
         document.getElementById('hideMascots').onchange = e => {
             document.querySelector('.snoopy').style.display = e.target.checked ? 'none' : '';
             document.querySelector('.honse').style.display = e.target.checked ? 'none' : '';
-        };
-
-        document.getElementById('fullscreenBtn').onclick = () => {
-            playSound('toggleSound');
-            if (!document.fullscreenElement) {
-                document.documentElement.requestFullscreen();
-            } else {
-                document.exitFullscreen();
-            }
         };
 
         function startTimer() {
@@ -1384,11 +1559,7 @@ background: #0B486B;
             questions = await res.json();
             questions = shuffleArray(questions);
 
-            current = 0;
-            score = 0;
-            streak = 0;
-            updateStreakMeter();
-
+            resetGame({ resetScore: true });
             showQuestion();
         }
 
@@ -1407,7 +1578,7 @@ background: #0B486B;
         };
 
         function resolveDeck(savedDeck) {
-            const select = document.getElementById('testSelect');
+            // const select = document.getElementById('testSelect');
             const options = [...select.options].map(o => o.value);
 
             if (savedDeck && options.includes(savedDeck)) {
@@ -1417,94 +1588,118 @@ background: #0B486B;
             return DEFAULT_DECK;
         }
 
+        document.getElementById('drawerDeckSelect').onchange = e => {
+            playSound('toggleSound');
+
+            currentDeck = e.target.value;
+            localStorage.setItem(DECK_KEY, currentDeck);
+
+            endlessMode = false;
+            hyperMode = false;
+            document.body.classList.remove('hypermode');
+
+            current = 0;
+            score = 0;
+            streak = 0;
+            updateStreakMeter();
+
+            loadQuestions(currentDeck);
+        };
+
+        document.getElementById('drawerEndlessToggle').onchange = e => {
+            endlessMode = e.target.checked;
+
+            if (!endlessMode) {
+                hyperMode = false;
+                document.body.classList.remove('hypermode');
+            }
+
+            resetGame({ resetScore: true });
+            showQuestion();
+        };
+
+
+        document.getElementById('drawerHyperToggle').onchange = e => {
+            hyperMode = e.target.checked;
+            endlessMode = hyperMode;
+
+            document.body.classList.toggle('hypermode', hyperMode);
+
+            resetGame({ resetScore: true });
+            showQuestion();
+        };
+
+
+
+        document.getElementById('drawerFullscreenBtn').onclick = () => {
+            playSound('toggleSound');
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        };
+
+
+        function syncDrawerUI() {
+            syncQuestionTypeUI();
+
+            const drawerSelect = document.getElementById('drawerDeckSelect');
+            if (!drawerSelect) return;
+
+            drawerSelect.innerHTML = '';
+
+            DECKS.forEach(deck => {
+                const opt = document.createElement('option');
+                opt.value = deck.value;
+                opt.textContent = deck.label;
+                drawerSelect.appendChild(opt);
+            });
+
+            drawerSelect.value = currentDeck;
+
+            document.getElementById('drawerEndlessToggle').checked = endlessMode;
+            document.getElementById('drawerHyperToggle').checked = hyperMode;
+        }
 
 
         document.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('pahootThemeSet');
-            if (savedTheme) {
-                document.body.classList.add(savedTheme);
-            }
-            const themes = JSON.parse(localStorage.getItem(THEMES_KEY));
-            if (themes) {
-                console.log(themes);
-                for (let value in themes) {
-                    const themeOption = document.createElement('option');
-                    themeOption.innerText = ACHIEVEMENT_THEMES[value];
-                    document.getElementById("themeSelect").appendChild(themeOption);
-                }
-            }
-
-
-            renderAchievementTicker();
-            const savedAnswerType = localStorage.getItem('pahootAnswerType');
-            if (savedAnswerType) {
-                answerType = savedAnswerType;
-                document.getElementById('answerTypeSelect').value = answerType;
-            }
-            // Resolve deck safely
+            // Deck
             const savedDeck = localStorage.getItem(DECK_KEY);
-            if (savedDeck) {
-                currentDeck = resolveDeck(savedDeck);
-                document.getElementById('testSelect').value = savedDeck;
-            } else {
-                document.getElementById('testSelect').value = DEFAULT_DECK;
-            }
+            currentDeck = DECKS.some(d => d.value === savedDeck)
+                ? savedDeck
+                : DEFAULT_DECK;
 
-            document.getElementById('testSelect').addEventListener('change', e => {
-                playSound('toggleSound');
+            // Settings
+            const savedSettings = localStorage.getItem(SETTINGS_KEY);
+            if (savedSettings) settings = JSON.parse(savedSettings);
 
-                currentDeck = e.target.value;
-                localStorage.setItem(DECK_KEY, currentDeck);
+            // Achievements & themes
+            const savedAchievements = localStorage.getItem(ACHIEVEMENTS_KEY);
+            if (savedAchievements) unlockedAchievements = JSON.parse(savedAchievements);
 
-                endlessMode = false;
-                hyperMode = false;
+            const savedThemes = localStorage.getItem(THEMES_KEY);
+            if (savedThemes) unlockedThemes = JSON.parse(savedThemes);
 
-                document.getElementById('endlessToggle').checked = false;
-                document.getElementById('hyperToggle').checked = false;
-
-                document.body.classList.remove('hypermode');
-
-                loadQuestions(currentDeck);
-            });
-
-            const saved = localStorage.getItem(SETTINGS_KEY);
-            if (saved) {
-                settings = JSON.parse(saved);
-            }
             applySettings();
-            endlessMode = false;
-            hyperMode = false;
-            document.getElementById('endlessToggle').checked = false;
-            document.getElementById('hyperToggle').checked = false;
+            renderThemeOptions();
+            renderAchievementTicker();
+            syncDrawerUI();
 
-            document.querySelectorAll('audio').forEach(a => {
-                a.volume = 0.9;
-            });
-            document.getElementById('endlessToggle').addEventListener('change', e => {
-                playSound('toggleSound');
-                endlessMode = e.target.checked;
-                current = 0;
-                score = 0;
-                streak = 0;
-                updateStreakMeter();
-                questions = shuffleArray(questions);
-                showQuestion();
+            loadQuestions(currentDeck);
+        });
 
-            });
-            document.getElementById('hyperToggle').addEventListener('change', e => {
-                playSound('toggleSound');
-                hyperMode = e.target.checked;
-                endlessMode = hyperMode; // Hyper implies endless
-                current = 0;
-                score = 0;
-                streak = 0;
-                updateStreakMeter();
 
-                questions = shuffleArray(questions);
+        const saved = localStorage.getItem(SETTINGS_KEY);
+        if (saved) {
+            settings = JSON.parse(saved);
+        }
+        applySettings();
+        endlessMode = false;
+        hyperMode = false;
 
-                document.body.classList.toggle('hypermode', hyperMode);
-                showQuestion();
-            });
+        document.querySelectorAll('audio').forEach(a => {
+            a.volume = 0.9;
         });
 
         function shuffleArray(arr) {
@@ -1516,43 +1711,25 @@ background: #0B486B;
         }
 
         function showQuestion() {
+            updateHUD();
+
+            if (current >= questions.length) {
+                if (endlessMode) {
+                    questions = shuffleArray(questions);
+                    current = 0;
+                } else {
+                    endQuiz();
+                    return;
+                }
+            }
+            const q = questions[current];
+            console.log(q);
+            const currentAnswerType = pickAnswerType();
+
 
             document.body.style.filter = "";
-            if (!endlessMode && current >= questions.length) {
-                if (!endlessMode && wrongQuestions.length === 0) {
-                    unlockAchievement('perfect_deck');
-                }
-                playSound('endSound');
-                document.querySelector('.answers').classList.add('hidden');
-                document.getElementById('question').textContent = 'Quiz Finished!';
-                document.getElementById('tracker').classList.add('hidden');
-                const result = document.getElementById('result');
-                result.textContent = `Final Score: ${score} / ${questions.length}`;
-                result.classList.remove('hidden');
-                if (!endlessMode && current >= questions.length) {
-                    document.getElementById('retryMissedBtn').classList.toggle(
-                        'hidden',
-                        wrongQuestions.length === 0
-                    );
-                }
-                return;
-            }
 
-            if (endlessMode && current >= questions.length) {
-                questions = shuffleArray(questions);
-                current = 0;
-            }
-
-            document.querySelector('.answers').classList.remove('hidden');
-            document.getElementById('tracker').classList.remove('hidden');
-            document.getElementById('result').classList.add('hidden');
-
-            const q = questions[current];
             document.getElementById('question').textContent = q.question;
-            document.getElementById('tracker').textContent =
-                endlessMode
-                    ? `Endless Mode | Score: ${score}`
-                    : `Question ${current + 1} | Score: ${score}`;
 
             clearInterval(timerInterval);
 
@@ -1563,7 +1740,7 @@ background: #0B486B;
             }
 
 
-            if (answerType === 'mc') {
+            if (currentAnswerType === 'mc') {
                 document.querySelector('.answers').classList.remove('hidden');
                 document.getElementById('typedAnswer').classList.add('hidden');
 
@@ -1579,7 +1756,7 @@ background: #0B486B;
                     };
                 });
             }
-            if (answerType === 'typed') {
+            if (currentAnswerType === 'typed') {
                 document.querySelector('.answers').classList.add('hidden');
 
                 const input = document.getElementById('typedAnswer');
@@ -1597,7 +1774,7 @@ background: #0B486B;
                     }
                 };
             }
-            if (answerType === 'tf') {
+            if (currentAnswerType === 'tf') {
                 document.querySelector('.answers').classList.remove('hidden');
                 document.getElementById('typedAnswer').classList.add('hidden');
 
@@ -1619,11 +1796,14 @@ background: #0B486B;
                 buttons[1].onclick = () => handleAnswer(!isTrue);
             }
 
+            answerStartTime = performance.now();
 
         }
 
         function selectAnswer(isCorrect) {
+            updateHUD();
             answerBias.totalAnswers++;
+            updateCognitiveLoad(isCorrect);
             clearInterval(timerInterval);
             document.body.style.filter = "";
             const q = questions[current];
@@ -1660,8 +1840,6 @@ background: #0B486B;
                 showBiasWarning(bias);
             }
 
-            // if (!bias) unlockAchievement('anti_pattern');
-
             setTimeout(() => {
                 current++;
                 showQuestion();
@@ -1669,7 +1847,11 @@ background: #0B486B;
         }
 
         function handleAnswer(correct) {
+            updateHUD();
+            answerBias.totalAnswers++;
             clearInterval(timerInterval);
+            updateCognitiveLoad(isCorrect);
+
 
             if (correct) {
                 score++;
