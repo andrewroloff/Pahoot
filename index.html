@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <meta charset="UTF-8" />
     <meta http-equiv="Cache-Control" content="no-cache" />
     <title>Pahoot!</title>
@@ -28,6 +29,65 @@
 
         body.darkmode {
             background: #0b0b14;
+        }
+
+        /* =========================
+   MICRO ANIMATIONS
+========================= */
+
+        .question {
+            animation: questionIn 0.35s ease-out;
+        }
+
+        @keyframes questionIn {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        button.answer {
+            animation: answerPop 0.25s ease-out;
+        }
+
+        @keyframes answerPop {
+            from {
+                transform: scale(0.96);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Hypermode hover wobble */
+        body.hypermode button.answer:hover {
+            animation: wobble 0.25s ease-in-out;
+        }
+
+        @keyframes wobble {
+            0% {
+                transform: rotate(0deg) scale(1.03);
+            }
+
+            25% {
+                transform: rotate(-1deg) scale(1.03);
+            }
+
+            50% {
+                transform: rotate(1deg) scale(1.03);
+            }
+
+            100% {
+                transform: rotate(0deg) scale(1.03);
+            }
         }
 
 
@@ -332,8 +392,9 @@
             position: absolute;
             width: 10px;
             height: 10px;
-            animation: fall 2s linear forwards;
+            animation: fall 5s linear forwards;
         }
+
 
         .snoopy {
             position: absolute;
@@ -349,13 +410,14 @@
 
         @keyframes fall {
             from {
-                transform: translateY(-10vh) rotate(0deg);
+                transform: translateY(0) rotate(0deg);
             }
 
             to {
-                transform: translateY(100vh) rotate(720deg);
+                transform: translateY(110vh) rotate(720deg);
             }
         }
+
 
         .mode-toggle {
             display: flex;
@@ -507,7 +569,38 @@
         </button>
 
         <div class="tracker" id="tracker">Question 1 | Score: 0</div>
+        <div id="streakMeter" style="
+    height: 10px;
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 12px;
+            ">
+            <div id="streakFill" style="
+        height: 100%;
+        width: 0%;
+        background: #0B486B;
+            background: linear-gradient(5deg,
+                    #0B486B, #F56217);
+        transition: width 0.3s ease;
+            "></div>
+        </div>
         <div class="tracker hidden" id="timer">⏱ 3.0</div>
+        <div style="margin-bottom:14px; text-align:center;">
+            <select id="testSelect" style="
+        width:100%;
+        padding:10px;
+        border-radius:999px;
+        border:none;
+        background:linear-gradient(5deg,#0B486B,#F56217);
+        font-weight:bold;
+        cursor:pointer;
+        ">
+                <option selected value="questions/AnimalNutritionFinal.json">Animal Nutrition Final</option>
+            </select>
+        </div>
+
         <div class="mode-toggle">
             <span class="mode-label">Normal</span>
 
@@ -575,6 +668,59 @@
         let hyperTimeLimit = 3;
         let timerInterval = null;
         let lockinMode = false;
+        const DEFAULT_DECK = 'questions/AnimalNutritionFinal.json';
+        let currentDeck = DEFAULT_DECK;
+        const MAX_STREAK_FOR_FULL = 10;
+        const DECK_KEY = 'pahootDeck';
+
+        //dev_mode() function for loading the test deck
+        window.dev_mode = function () {
+            const TEST_DECK = 'test.json';
+
+            console.warn('⚠️ DEV MODE ENABLED');
+            console.log('Loading test deck:', TEST_DECK);
+
+            currentDeck = TEST_DECK;
+
+            // Persist for refresh if desired
+            localStorage.setItem('pahootDeck', currentDeck);
+
+            // Reset modes
+            endlessMode = false;
+            hyperMode = false;
+            document.getElementById('endlessToggle').checked = false;
+            document.getElementById('hyperToggle').checked = false;
+            document.body.classList.remove('hypermode');
+
+            // Reset game state
+            current = 0;
+            score = 0;
+            streak = 0;
+            updateStreakMeter();
+
+            // Sync dropdown if it exists
+            const deckSelect = document.getElementById('testSelect');
+            if (deckSelect) {
+                deckSelect.value = currentDeck;
+            }
+
+            // Load deck
+            loadQuestions(currentDeck);
+        };
+
+
+        function updateStreakMeter() {
+            const fill = document.getElementById('streakFill');
+            const percent = Math.min(100, (streak / MAX_STREAK_FOR_FULL) * 100);
+            fill.style.width = percent + '%';
+
+            if (hyperMode && streak >= 5) {
+                fill.style.boxShadow = `0 0 ${10 + streak * 2}px #ff00ff`;
+            } else {
+                fill.style.boxShadow = 'none';
+            }
+        }
+
 
         function applySettings() {
             // Mascots
@@ -657,7 +803,9 @@
 
         function startTimer() {
             clearInterval(timerInterval);
-            hyperTimeLimit = parseInt(document.getElementById('hyperTime').value) || 5;
+            const base = parseFloat(document.getElementById('hyperTime').value) || 3;
+            hyperTimeLimit = Math.max(1.2, base - Math.floor(streak / 4) * 0.25);
+
             timeLeft = hyperTimeLimit;
 
             const timerEl = document.getElementById('timer');
@@ -667,15 +815,20 @@
             timerInterval = setInterval(() => {
                 timeLeft -= 0.1;
                 if (hyperMode) {
-                    if (Math.abs(timeLeft % 1) < 0.05) {
+                    const pulseRate = Math.max(0.4, 1 - streak * 0.05);
+                    if (Math.abs(timeLeft % pulseRate) < 0.05) {
                         playSound('bassSound');
                     }
 
-                    const intensity = Math.max(0, 3 - timeLeft);
+
+
+                    const urgency = Math.max(0, hyperTimeLimit - timeLeft);
                     document.body.style.filter = `
-                    brightness(${1 + intensity * 0.12})
-                    contrast(${1 + intensity * 0.08})
+                        brightness(${1 + urgency * 0.18})
+                        contrast(${1 + urgency * 0.12})
+                        saturate(${1 + urgency * 0.2})
                     `;
+
                 }
 
 
@@ -691,27 +844,56 @@
                     setTimeout(() => {
                         current++;
                         showQuestion();
-                    }, 2000);
+                    }, 1000);
                 }
             }, 100);
         }
 
 
-        async function loadQuestions() {
-            const res = await fetch('questions.json');
+        async function loadQuestions(deck = currentDeck) {
+            const res = await fetch(deck);
             questions = await res.json();
             questions = shuffleArray(questions);
+
             current = 0;
             score = 0;
+            streak = 0;
+            updateStreakMeter();
+
             showQuestion();
         }
 
 
+
         document.addEventListener('DOMContentLoaded', () => {
+            const savedDeck = localStorage.getItem(DECK_KEY);
+            if (savedDeck) {
+                currentDeck = savedDeck;
+                document.getElementById('testSelect').value = savedDeck;
+            }
+
+            document.getElementById('testSelect').addEventListener('change', e => {
+                playSound('toggleSound');
+
+                currentDeck = e.target.value;
+                localStorage.setItem(DECK_KEY, currentDeck);
+
+                endlessMode = false;
+                hyperMode = false;
+
+                document.getElementById('endlessToggle').checked = false;
+                document.getElementById('hyperToggle').checked = false;
+
+                document.body.classList.remove('hypermode');
+
+                loadQuestions(currentDeck);
+            });
+
             const saved = localStorage.getItem(SETTINGS_KEY);
             if (saved) {
                 settings = JSON.parse(saved);
             }
+            applySettings();
             endlessMode = false;
             hyperMode = false;
             document.getElementById('endlessToggle').checked = false;
@@ -725,6 +907,8 @@
                 endlessMode = e.target.checked;
                 current = 0;
                 score = 0;
+                streak = 0;
+                updateStreakMeter();
                 questions = shuffleArray(questions);
                 showQuestion();
 
@@ -735,6 +919,9 @@
                 endlessMode = hyperMode; // Hyper implies endless
                 current = 0;
                 score = 0;
+                streak = 0;
+                updateStreakMeter();
+
                 questions = shuffleArray(questions);
 
                 document.body.classList.toggle('hypermode', hyperMode);
@@ -808,8 +995,10 @@
 
             if (isCorrect) {
                 playSound('correctSound');
+                document.getElementById('question').textContent = 'Correct!';
                 score++;
                 streak++;
+                updateStreakMeter();
                 playSound('confettiSound');
                 showConfetti();
 
@@ -817,6 +1006,7 @@
                     `0 0 ${20 + streak * 5}px rgba(255,0,255,0.8)`;
             } else {
                 streak = 0;
+                updateStreakMeter();
                 playSound('wrongSound');
                 const correctText = q.choices[q.correct];
                 showWrong(correctText);
@@ -828,7 +1018,7 @@
             setTimeout(() => {
                 current++;
                 showQuestion();
-            }, 2000);
+            }, isCorrect ? 4000 : 1000);
         }
 
         function showWrong(correctAnswer) {
@@ -844,7 +1034,7 @@
             </div>
         `;
             document.querySelector('.quiz-container').appendChild(overlay);
-            setTimeout(() => overlay.remove(), 2000);
+            setTimeout(() => overlay.remove(), 1000);
         }
 
         function showConfetti() {
@@ -857,13 +1047,14 @@
                 const conf = document.createElement('div');
                 conf.className = 'confetti';
                 conf.style.left = Math.random() * 100 + '%';
+                conf.style.top = '-10px'
                 conf.style.background = `hsl(${Math.random() * 360},100%,50%)`;
                 conf.style.animationDelay = Math.random() * 0.5 + 's';
                 overlay.appendChild(conf);
             }
 
             container.appendChild(overlay);
-            setTimeout(() => overlay.remove(), 2000);
+            setTimeout(() => overlay.remove(), 4000);
         }
 
         loadQuestions();
