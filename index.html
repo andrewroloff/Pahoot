@@ -1162,11 +1162,11 @@ background: #0B486B;
             }
             const themeDiv = `<div style="font-size:1rem;">You've unlocked ${unlockedTheme}! Change your theme in settings.</div>`
             popup.innerHTML = `
-    <div style="text-align:center;">
+    <div style="text-align:center; padding: 10px;">
       <div style="font-size:5rem;">🏆</div>
       <div style="font-size:2rem;">${ach.title}</div>
       <div style="font-size:1rem;">${ach.desc}</div>
-      ${unlockedTheme ? themeDiv : null}
+      ${unlockedTheme ? themeDiv : ""}
     </div>
   `;
             popup.firstElementChild.style.boxShadow =
