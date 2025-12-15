@@ -21,6 +21,207 @@
             min-height: 100vh;
         }
 
+        body.darkmode {
+            background: #0b0b14;
+        }
+
+
+        /* =========================
+          VHS HYPERMODE FINAL FORM
+        ========================= */
+
+        body.hypermode {
+            background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a7da136d-c40b-41c4-860d-b12672b16096/ddim2vn-06fc8ade-95d8-4695-8a8e-82deeb9b8c5c.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9hN2RhMTM2ZC1jNDBiLTQxYzQtODYwZC1iMTI2NzJiMTYwOTYvZGRpbTJ2bi0wNmZjOGFkZS05NWQ4LTQ2OTUtOGE4ZS04MmRlZWI5YjhjNWMuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.--ZE7ZPTFKpsE-6T_tEMQe8rfhnSvvoEdXo6nmWu2qI") center / cover no-repeat fixed;
+        }
+
+        /* VHS chromatic aberration */
+        body.hypermode .quiz-container {
+            animation: chromaShift 0.12s infinite;
+            box-shadow:
+                -2px 0 rgba(255, 0, 0, 0.3),
+                2px 0 rgba(0, 255, 255, 0.3),
+                0 0 30px rgba(255, 0, 255, 0.4);
+        }
+
+        @keyframes chromaShift {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(1px, -1px);
+            }
+
+            50% {
+                transform: translate(-1px, 1px);
+            }
+
+            75% {
+                transform: translate(1px, 1px);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        /* CRT scanlines */
+        body.hypermode::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(to bottom,
+                    rgba(255, 255, 255, 0.04),
+                    rgba(255, 255, 255, 0.04) 1px,
+                    rgba(0, 0, 0, 0) 2px,
+                    rgba(0, 0, 0, 0) 4px);
+            animation: scan 0.15s linear infinite;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        @keyframes scan {
+            from {
+                background-position-y: 0;
+            }
+
+            to {
+                background-position-y: 4px;
+            }
+        }
+
+        /* Hyper title flicker */
+        body.hypermode h1 {
+            color: #ff4fd8;
+            text-shadow:
+                0 0 5px #ff4fd8,
+                0 0 15px #ff00ff,
+                0 0 30px #00ffff;
+            animation: flicker 0.12s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 0.85;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            60% {
+                opacity: 0.7;
+            }
+
+            80% {
+                opacity: 1;
+            }
+        }
+
+        /* Hide mascots in Hypermode */
+        body.hypermode .snoopy,
+        body.hypermode .honse {
+            display: none;
+        }
+
+        /* VHS vertical tracking roll */
+        body.hypermode::marker {
+            content: "";
+        }
+
+        body.hypermode::selection {
+            background: transparent;
+        }
+
+        body.hypermode::after {
+            animation: trackingRoll 6s infinite linear;
+        }
+
+        @keyframes trackingRoll {
+            0% {
+                transform: translateY(0);
+            }
+
+            95% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+        @keyframes screenTear {
+            0% {
+                transform: translateX(0);
+            }
+
+            20% {
+                transform: translateX(-8px);
+            }
+
+            40% {
+                transform: translateX(8px);
+            }
+
+            60% {
+                transform: translateX(-4px);
+            }
+
+            80% {
+                transform: translateX(4px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        body.screen-tear .quiz-container {
+            animation: screenTear 0.2s linear;
+        }
+
+        @keyframes wrongGlitch {
+            0% {
+                filter: blur(0);
+            }
+
+            30% {
+                filter: blur(2px) hue-rotate(30deg);
+            }
+
+            60% {
+                filter: blur(1px) hue-rotate(-30deg);
+            }
+
+            100% {
+                filter: blur(0);
+            }
+        }
+
+        body.wrong-glitch .quiz-container {
+            animation: wrongGlitch 0.4s ease;
+        }
+
+        body.lockin * {
+            animation: none !important;
+        }
+
+        body.lockin .snoopy,
+        body.lockin .honse,
+        body.lockin #settingsBtn {
+            display: none !important;
+        }
+
+        body.lockin {
+            background: #000;
+        }
+
+
         .quiz-container {
             background: #1e1e2f;
             opacity: 75%;
@@ -97,7 +298,7 @@
         }
 
         .hidden {
-            display: none;
+            display: none !important;
         }
 
         .result {
@@ -228,15 +429,80 @@
 <audio id="confettiSound" src="sounds/confetti.wav" preload="auto"></audio>
 <audio id="toggleSound" src="sounds/toggle.wav" preload="auto"></audio>
 <audio id="endSound" src="sounds/win.wav" preload="auto"></audio>
+<audio id="bassSound" src="sounds/bass.mp3" preload="auto"></audio>
+
+<div id="settingsOverlay" class="overlay hidden">
+    <div style="
+        background:#111;
+        padding:30px;
+        border-radius:16px;
+        width:320px;
+        text-align:left;
+        font-size:14px;
+    ">
+        <h2 style="text-align:center;margin-top:0;">Settings</h2>
+
+        <label>
+            <input type="checkbox" id="hideMascots">
+            Hide Mascots
+        </label><br><br>
+
+        <label>
+            Hypermode Timer (seconds)
+            <input type="number" id="hyperTime" min="1" max="10" value="3" style="width:100%;margin-top:4px;">
+        </label><br><br>
+
+        <label>
+            <input type="checkbox" id="darkMode">
+            Dark Mode (Non-Hyper)
+        </label><br><br>
+
+        <label>
+            <input type="checkbox" id="lockinMode">
+            Lock-In Mode
+        </label><br><br>
+
+        <button id="closeSettings" style="
+                width:100%;
+                padding:10px;
+                border:none;
+                border-radius:999px;
+                background:linear-gradient(45deg,#ff00ff,#00ffff);
+                cursor:pointer;">
+            Done
+        </button>
+    </div>
+</div>
+
 
 <body>
     <div class="snoopy"><img
             src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWZ1cjU5ZnJ6cThjcjc2YWxoZmJsZXh2Z2xxOGZjbGlsaG42YWtjNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rgq4Sar77s85W/giphy.gif"
             alt="" width=300px></div>
-    <div class="honse"><img src="https://media.tenor.com/hFZPT9vXz-wAAAAM/horse-funny-horse.gif" alt=""></div>
+    <div class="honse">
+        <img src="https://media.tenor.com/hFZPT9vXz-wAAAAM/horse-funny-horse.gif" alt="">
+    </div>
     <div class="quiz-container" style="position: relative;">
         <h1>Pahoot!</h1>
+        <button id="settingsBtn" style="
+        position:absolute;
+        top:12px;
+        right:16px;
+        border:none;
+        border-radius:50%;
+        width:42px;
+        height:42px;
+        font-size:20px;
+        cursor:pointer;
+        background: #0B486B;
+            background: linear-gradient(5deg,
+                    #0B486B, #F56217);
+        color:black;">
+            ⚙️
+        </button>
+
         <div class="tracker" id="tracker">Question 1 | Score: 0</div>
+        <div class="tracker hidden" id="timer">⏱ 3.0</div>
         <div class="mode-toggle">
             <span class="mode-label">Normal</span>
 
@@ -245,8 +511,32 @@
                 <span class="slider"></span>
             </label>
 
-            <span class="mode-label">Endless</span>
+            <span id="mode-label">Endless</span>
+
+            <label class="bubble-switch">
+                <input type="checkbox" id="hyperToggle">
+                <span class="slider"></span>
+            </label>
+
+            <span class="mode-label">Hyper</span>
+
+
         </div>
+
+        <button id="fullscreenBtn" style="
+        margin: 10px auto;
+        display: block;
+        padding: 8px 20px;
+        border-radius: 999px;
+        border: none;
+        background: #0B486B;
+        background: linear-gradient(5deg,
+        #0B486B, #F56217);
+        color: black;
+        font-weight: bold;
+        cursor: pointer;">
+            ⛶ FULLSCREEN
+        </button>
 
 
         <div class="question" id="question">Loading...</div>
@@ -267,10 +557,140 @@
             sound.play().catch(() => { });
         }
 
+        //Globals
+
         let questions = [];
         let current = 0;
         let score = 0;
+        let streak = 0;
         let endlessMode = false;
+        let hyperMode = false;
+        let timer = false;
+        let timeLeft = 5.0;
+        let hyperTimeLimit = 3;
+        let timerInterval = null;
+        let lockinMode = false;
+
+        function applySettings() {
+            // Mascots
+            document.querySelector('.snoopy').style.display =
+                settings.hideMascots ? 'none' : '';
+            document.querySelector('.honse').style.display =
+                settings.hideMascots ? 'none' : '';
+
+            // Hyper timer
+            hyperTimeLimit = settings.hyperTime;
+
+            // Dark mode (non-hyper only)
+            if (!hyperMode) {
+                document.body.classList.toggle('darkmode', settings.darkMode);
+            }
+
+            // Lock-in mode
+            document.body.classList.toggle('lockin', settings.lockinMode);
+
+            // Sync UI
+            document.getElementById('hideMascots').checked = settings.hideMascots;
+            document.getElementById('hyperTime').value = settings.hyperTime;
+            document.getElementById('darkMode').checked = settings.darkMode;
+            document.getElementById('lockinMode').checked = settings.lockinMode;
+        }
+
+        function saveSettings() {
+            localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
+        }
+
+
+        const SETTINGS_KEY = 'pahootSettings';
+
+        let settings = {
+            hideMascots: false,
+            hyperTime: 3,
+            darkMode: false,
+            lockinMode: false
+        };
+
+
+        document.getElementById('lockinMode').onchange = e => {
+            lockinMode = e.target.checked;
+            document.body.classList.toggle('lockin', lockinMode);
+        };
+
+
+        document.getElementById('darkMode').onchange = e => {
+            if (!hyperMode) {
+                document.body.classList.toggle('darkmode', e.target.checked);
+            }
+        };
+
+
+        document.getElementById('settingsBtn').onclick = () => {
+            playSound('toggleSound');
+            document.getElementById('settingsOverlay').classList.remove('hidden');
+        };
+
+        document.getElementById('closeSettings').onclick = () => {
+            playSound('toggleSound');
+            document.getElementById('settingsOverlay').classList.add('hidden');
+        };
+
+        document.getElementById('hideMascots').onchange = e => {
+            document.querySelector('.snoopy').style.display = e.target.checked ? 'none' : '';
+            document.querySelector('.honse').style.display = e.target.checked ? 'none' : '';
+        };
+
+
+        document.getElementById('fullscreenBtn').onclick = () => {
+            playSound('toggleSound');
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        };
+
+
+        function startTimer() {
+            clearInterval(timerInterval);
+            hyperTimeLimit = parseInt(document.getElementById('hyperTime').value) || 5;
+            timeLeft = hyperTimeLimit;
+
+            const timerEl = document.getElementById('timer');
+            timerEl.classList.remove('hidden');
+            timerEl.textContent = `⏱ ${timeLeft.toFixed(1)}`;
+
+            timerInterval = setInterval(() => {
+                timeLeft -= 0.1;
+                if (hyperMode) {
+                    if (Math.abs(timeLeft % 1) < 0.05) {
+                        playSound('bassSound');
+                    }
+
+                    const intensity = Math.max(0, 3 - timeLeft);
+                    document.body.style.filter = `
+                    brightness(${1 + intensity * 0.12})
+                    contrast(${1 + intensity * 0.08})
+                    `;
+                }
+
+
+                timerEl.textContent = `⏱ ${timeLeft.toFixed(1)}`;
+
+                if (timeLeft <= 0) {
+                    document.body.classList.add('screen-tear');
+                    setTimeout(() => document.body.classList.remove('screen-tear'), 200);
+                    clearInterval(timerInterval);
+                    playSound('wrongSound');
+                    const q = questions[current];
+                    showWrong(q.choices[q.correct]);
+                    setTimeout(() => {
+                        current++;
+                        showQuestion();
+                    }, 2000);
+                }
+            }, 100);
+        }
+
 
         async function loadQuestions() {
             const res = await fetch('questions.json');
@@ -281,7 +701,17 @@
             showQuestion();
         }
 
+
         document.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem(SETTINGS_KEY);
+            if (saved) {
+                settings = JSON.parse(saved);
+            }
+            endlessMode = false;
+            hyperMode = false;
+            document.getElementById('endlessToggle').checked = false;
+            document.getElementById('hyperToggle').checked = false;
+
             document.querySelectorAll('audio').forEach(a => {
                 a.volume = 0.9;
             });
@@ -294,6 +724,17 @@
                 showQuestion();
 
             });
+            document.getElementById('hyperToggle').addEventListener('change', e => {
+                playSound('toggleSound');
+                hyperMode = e.target.checked;
+                endlessMode = hyperMode; // Hyper implies endless
+                current = 0;
+                score = 0;
+                questions = shuffleArray(questions);
+
+                document.body.classList.toggle('hypermode', hyperMode);
+                showQuestion();
+            });
         });
 
         function shuffleArray(arr) {
@@ -305,6 +746,7 @@
         }
 
         function showQuestion() {
+            document.body.style.filter = "";
             if (!endlessMode && current >= questions.length) {
                 playSound('endSound');
                 document.querySelector('.answers').classList.add('hidden');
@@ -332,6 +774,15 @@
                     ? `Endless Mode | Score: ${score}`
                     : `Question ${current + 1} | Score: ${score}`;
 
+            clearInterval(timerInterval);
+
+            if (hyperMode) {
+                startTimer();
+            } else {
+                document.getElementById('timer').classList.add('hidden');
+            }
+
+
             document.querySelectorAll('button.answer').forEach(btn => {
                 const i = btn.dataset.index;
                 btn.textContent = q.choices[i];
@@ -345,18 +796,27 @@
         }
 
         function selectAnswer(index) {
+            clearInterval(timerInterval);
+            document.body.style.filter = "";
             const q = questions[current];
             const isCorrect = parseInt(index) === q.correct;
 
             if (isCorrect) {
                 playSound('correctSound');
                 score++;
+                streak++;
                 playSound('confettiSound');
                 showConfetti();
+
+                document.querySelector('.quiz-container').style.boxShadow =
+                    `0 0 ${20 + streak * 5}px rgba(255,0,255,0.8)`;
             } else {
+                streak = 0;
                 playSound('wrongSound');
                 const correctText = q.choices[q.correct];
                 showWrong(correctText);
+                document.querySelector('.quiz-container').style.boxShadow =
+                    `0 10px 25px rgba(0,0,0,0.4)`;
             }
 
 
