@@ -215,7 +215,7 @@
             "High rainfall, high labor, poor biodiversity, intensive crop yield, soil erosion, pest resistance",
             "High nutrient soil, irrigated fields, monoculture preference, mechanization, pesticide use, crop rotation",
             "Unsuitable soil for crops, low rainfall, low labor, cost-effective, preserve biodiversity, ruminant adaptation",
-            "Land far from markets, poor roads, high fertilizer cost, low feed demand, animal preference, pasture weeds"
+            "Bad terrain, bad access to water, poor soil fertility, low biodiversity in soil, higher rate then previous rate, being eco-friendly basically (wildlife-wise)"
         ],
         "correct": 3
     },
@@ -347,7 +347,7 @@
             "Min req: feed cost; RDA: feed efficiency; EAR: growth rate; UL: toxicity",
             "All terms refer to protein content only; no standard definitions"
         ],
-        "correct": 3
+        "correct": 0
     },
     {
         "question": "What are the differences between empirical and mechanistic nutritional models? What purpose would each be used for?",
@@ -378,5 +378,15 @@
             "Land Crop Allocation"
         ],
         "correct": 2
+    },
+    {
+        "question": "Name each of the seven macrominerals and identify if they are positively or negatively charged.",
+        "choices": [
+            "Calcium (+), Phosphorus (-), Magnesium (+), Sodium (+), Potassium (+), Chloride (-), Sulfur (-) ✅",
+            "Calcium (-), Phosphorus (+), Magnesium (-), Sodium (-), Potassium (-), Chloride (+), Sulfur (+)",
+            "Calcium (+), Phosphorus (+), Magnesium (+), Sodium (-), Potassium (-), Chloride (-), Sulfur (-)",
+            "All are positively charged"
+        ],
+        "correct": 0
     }
 ]

@@ -1,0 +1,2532 @@
+[
+    {
+        "question": "Define nutrition.",
+        "choices": [
+            "The process by which animals take in, assimilate, and use nutrients for growth, maintenance, and reproduction",
+            "The breakdown of feed in the rumen",
+            "The movement of nutrients across the gut wall",
+            "The excretion of waste products from the body"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define digestion.",
+        "choices": [
+            "The process of breaking down feed into smaller molecules to be absorbed",
+            "The transport of nutrients via the bloodstream",
+            "The storage of nutrients in tissues",
+            "The synthesis of body proteins from amino acids"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define absorption.",
+        "choices": [
+            "The process by which digested nutrients pass through the intestinal wall into the blood or lymph",
+            "The chemical breakdown of carbohydrates",
+            "The excretion of nitrogenous wastes",
+            "The synthesis of fatty acids in the liver"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define excretion.",
+        "choices": [
+            "The elimination of waste products of metabolism from the body",
+            "The breakdown of proteins into amino acids",
+            "The absorption of nutrients in the small intestine",
+            "The conversion of glucose into glycogen"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define metabolism.",
+        "choices": [
+            "All chemical processes in the body including energy production, anabolism, and catabolism",
+            "The storage of feed in the rumen",
+            "The intake of water and feed",
+            "The excretion of feces"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define anabolism.",
+        "choices": [
+            "Metabolic processes that build complex molecules from simpler ones, requiring energy",
+            "Metabolic processes that break down molecules for energy",
+            "The elimination of waste products",
+            "The mechanical breakdown of feed"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define catabolism.",
+        "choices": [
+            "Metabolic processes that break down complex molecules into simpler ones, releasing energy",
+            "Processes that synthesize proteins and fat",
+            "The intake of nutrients from feed",
+            "The movement of nutrients in the blood"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the different classifications of animals based on diet selection?",
+        "choices": [
+            "Herbivores, carnivores, omnivores, Pre-gastric fermenters, and Hindgut fermenters",
+            "Ruminants and monogastrics only",
+            "Carnivores and scavengers only",
+            "Poultry and swine only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the difference between a diet, a ration, and a balanced ration?",
+        "choices": [
+            "Diet: Total food consumed; Ration: A specific provision of food; Balanced ration: meets nutrient requirements",
+            "Diet: nutrient supplement; Ration: water intake; Balanced ration: energy-only feed",
+            "Diet: pasture only; Ration: grain only; Balanced ration: mixed forage",
+            "No difference; all terms mean total feed intake"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the 6 major nutrients and their roles?",
+        "choices": [
+            "Water, carbohydrates, lipids, protein, minerals, vitamins; provide energy, structure, and regulate metabolism",
+            "Protein, sugar, fiber, salt, water, vitamins; all provide energy only",
+            "Carbohydrates, protein, fat, alcohol, fiber, minerals; all structural components",
+            "Water, protein, sugar, starch, oil, vitamins; regulate hormones only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What do the terms in vivo, in vitro, and in situ mean?",
+        "choices": [
+            "In vivo: in the animal; In vitro: in the lab; In situ: in the original location",
+            "In vivo: in a test tube; In vitro: in an animal; In situ: during digestion",
+            "In vivo: in rumen; In vitro: in cell culture; In situ: in feed storage",
+            "All three mean the same: laboratory analysis"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the differences in methodology between wet chemistry and NIR analyses, and advantages/disadvantages?",
+        "choices": [
+            "Wet chemistry: chemical reactions, accurate but expensive; NIR: light absorption, fast but less accurate for some nutrients",
+            "Wet chemistry: uses light; NIR: uses chemical reactions; both equally fast and accurate",
+            "Wet chemistry: measures color only; NIR: measures protein only; no advantages",
+            "Both are identical in method, time, and accuracy"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which nutrients cannot be measured using NIR?",
+        "choices": [
+            "Minerals",
+            "Carbohydrates and protein",
+            "Fat and fiber",
+            "Water-soluble vitamins"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the equation used to determine the crude protein of feeds?",
+        "choices": [
+            "Crude protein (%) = Nitrogen (%) × 6.25",
+            "Crude protein (%) = Nitrogen (%) × 5.0",
+            "Crude protein (%) = Nitrogen (%) × 8.0",
+            "Crude protein (%) = Nitrogen (%) ÷ 6.25"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the 5 components of the proximate analysis system, and generally how are they determined?",
+        "choices": [
+            "Nitrogen-free extract (NFE), Ash (burning), Crude protein (N × 6.25), Ether extract (EE), Crude fiber (CF)",
+            "Moisture (freezing), Ash (boiling), Protein (N × 5), Fat (solvent), Fiber (acid only)",
+            "Protein, starch, sugar, fat, water; all measured by NIR only",
+            "Vitamins, minerals, water, fat, fiber; determined by taste and color"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What nutrient is ether extract used to measure? What is the superior measure?",
+        "choices": [
+            "Fat; superior measure is acid hydrolyzed fat",
+            "Protein; superior measure is total nitrogen",
+            "Fiber; superior measure is NDF",
+            "Carbohydrates; superior measure is starch content"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What nutrient is ash a measure of and how is it determined?",
+        "choices": [
+            "Mineral content; determined by burning feed at high temperature",
+            "Fat content; determined by solvent extraction",
+            "Protein content; determined by nitrogen analysis",
+            "Fiber content; determined by acid digestion"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Are carbohydrates an essential nutrient? Why or why not?",
+        "choices": [
+            "No; animals can derive energy from fat and protein if carbs are absent",
+            "Yes; without carbs animals cannot survive",
+            "Yes; carbohydrates are the only energy source",
+            "No; carbohydrates provide no energy"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the 3 major nutritional categories of carbohydrates?",
+        "choices": [
+            "Monosaccharides, disaccharides, polysaccharides",
+            "Starch, fiber, sugar alcohols",
+            "Glucose, fructose, sucrose",
+            "Cellulose, hemicellulose, lignin only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the major carbohydrate found in animal tissues?",
+        "choices": [
+            "Glycogen",
+            "Starch",
+            "Cellulose",
+            "Glucose"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which carbohydrate is considered the 'energy vehicle' in an animal’s circulatory system?",
+        "choices": [
+            "Glucose",
+            "Fructose",
+            "Galactose",
+            "Sucrose"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name the monosaccharides that make up sucrose, lactose, and maltose.",
+        "choices": [
+            "Sucrose: glucose + fructose; Lactose: glucose + galactose; Maltose: glucose + glucose",
+            "Sucrose: glucose + galactose; Lactose: glucose + fructose; Maltose: fructose + glucose",
+            "Sucrose: galactose + fructose; Lactose: glucose + glucose; Maltose: glucose + galactose",
+            "All are made of fructose + glucose only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which sugar is table sugar, which sugar is found in fruit and honey, which sugar is found in milk?",
+        "choices": [
+            "Table sugar: sucrose; fruit/honey: fructose; milk: lactose",
+            "Table sugar: glucose; fruit/honey: maltose; milk: sucrose",
+            "Table sugar: lactose; fruit/honey: sucrose; milk: fructose",
+            "Table sugar: maltose; fruit/honey: glucose; milk: sucrose"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the difference between amylose and amylopectin?",
+        "choices": [
+            "Amylose: linear; Amylopectin: branched",
+            "Amylose: branched; Amylopectin: linear",
+            "Amylose: only in animals; Amylopectin: only in plants",
+            "No difference; both are linear glucose polymers"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 3 major components of the plant cell wall and rank them in order of digestibility.",
+        "choices": [
+            "Hemicellulose > Cellulose > Lignin",
+            "Cellulose > Hemicellulose > Lignin",
+            "Lignin > Cellulose > Hemicellulose",
+            "Pectin > Starch > Lignin"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Identify whether the following carbohydrates are structural or non-structural: glucose, amylose, cellulose, fructose, hemicellulose, lignin, inulin.",
+        "choices": [
+            "Glucose: NS; Amylose: NS; Cellulose: S; Fructose: NS; Hemicellulose: S; Lignin: S; Inulin: NS",
+            "All are structural carbohydrates",
+            "All are non-structural carbohydrates",
+            "Glucose: S; Amylose: S; Cellulose: NS; Fructose: S; Hemicellulose: NS; Lignin: NS; Inulin: S"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the difference in chemical bond that makes starch digestible by enzymes produced by both microbes and animals but makes fiber only digestible by microbial enzymes?",
+        "choices": [
+            "Starch has α-1,4 and α-1,6 glycosidic bonds; fiber has β-1,4 glycosidic bonds",
+            "Starch has β-1,4 bonds; fiber has α-1,4 bonds",
+            "Both starch and fiber have the same bonds",
+            "Starch is branched; fiber is linear but both digestible by animal enzymes"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the component of fiber that is completely indigestible by all livestock species including microbial fermentation?",
+        "choices": [
+            "Lignin",
+            "Cellulose",
+            "Hemicellulose",
+            "Pectin"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "List 3 factors that affect starch digestibility.",
+        "choices": [
+            "Grain processing, particle size, presence of fiber",
+            "Protein content, fat content, water intake",
+            "Mineral content, vitamin content, pH",
+            "Rumen fill, feed color, feed odor"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Rank the following carbohydrates for their rate of fermentation: starch, sugar, cellulose, pectin.",
+        "choices": [
+            "Sugar > Starch > Pectin > Cellulose",
+            "Cellulose > Pectin > Starch > Sugar",
+            "Starch > Sugar > Pectin > Cellulose",
+            "Pectin > Cellulose > Sugar > Starch"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What does VFA stand for? What are the 3 primary VFA produced in the rumen, ranked based on concentration?",
+        "choices": [
+            "Volatile fatty acids; Acetate > Propionate > Butyrate",
+            "Very fast acids; Propionate > Acetate > Butyrate",
+            "Variable feed acids; Butyrate > Acetate > Propionate",
+            "Volatile fiber acids; Acetate > Butyrate > Propionate"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "List 2 factors that affect the rate of VFA absorption.",
+        "choices": [
+            "Rumen pH and rumen wall surface area",
+            "Feed color and temperature",
+            "Water intake and activity level",
+            "Liver size and blood pressure"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the chemical elements that make up protein? Which element differentiates protein from other macronutrients?",
+        "choices": [
+            "Carbon, hydrogen, oxygen, nitrogen; nitrogen differentiates protein",
+            "Carbon, hydrogen, oxygen, sulfur; sulfur differentiates protein",
+            "Carbon, hydrogen, oxygen only; hydrogen differentiates protein",
+            "Carbon, hydrogen, oxygen, phosphorus; phosphorus differentiates protein"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the name of the bond that links amino acids together?",
+        "choices": [
+            "Peptide bond",
+            "Glycosidic bond",
+            "Ester bond",
+            "Hydrogen bond"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define crude protein (CP).",
+        "choices": [
+            "Total nitrogen content × 6.25",
+            "Protein measured after digestion",
+            "All true proteins only",
+            "Protein minus fiber content"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define true protein.",
+        "choices": [
+            "Protein composed only of amino acids",
+            "Protein including non-protein nitrogen",
+            "Protein measured by ether extract",
+            "Protein that is indigestible"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define non-protein nitrogen (NPN).",
+        "choices": [
+            "Nitrogen in feed not part of true protein, e.g., urea",
+            "Protein that is digestible in the rumen",
+            "Nitrogen in vitamins only",
+            "Nitrogen in minerals only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define digestible protein.",
+        "choices": [
+            "Portion of protein that can be broken down and absorbed by the animal",
+            "Protein that cannot be absorbed",
+            "Protein in feed minus water content",
+            "All nitrogen in feed"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the five different chemical classifications of amino acids?",
+        "choices": [
+            "Non-polar, polar uncharged, acidic, basic, sulfur-containing",
+            "Essential, non-essential, branched, aromatic, hydroxylated",
+            "Monosaccharide, disaccharide, polysaccharide, lipid, protein",
+            "Hydrophilic, hydrophobic, neutral, alkaline, acidic"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 5 essential amino acids.",
+        "choices": [
+            "Lysine, methionine, threonine, tryptophan, valine",
+            "Glycine, alanine, serine, cysteine, proline",
+            "Leucine, isoleucine, phenylalanine, glutamine, aspartate",
+            "Tyrosine, histidine, arginine, glutamine, serine"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the Maillard reaction and how does it affect the digestibility of protein feeds?",
+        "choices": [
+            "Reaction between sugars and amino acids; reduces protein digestibility",
+            "Fermentation of protein by microbes; increases digestibility",
+            "Oxidation of fats; decreases protein content",
+            "Hydrolysis of starch; improves protein availability"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define amino acid antagonism, amino acid toxicity, and amino acid imbalance.",
+        "choices": [
+            "Antagonism: excess of one reduces use of another; toxicity: excess harmful; imbalance: wrong ratio of AAs",
+            "Antagonism: AA deficiency; toxicity: AA shortage; imbalance: too much protein",
+            "All refer to digestibility issues only",
+            "All occur only in monogastrics"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 4 anti-nutritional factors that can reduce protein availability.",
+        "choices": [
+            "Tannins, protease inhibitors, lectins, glucosinolates",
+            "Starch, fiber, sugar, fat",
+            "Vitamins A, D, E, K",
+            "Water, sodium, calcium, magnesium"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the importance of the urea cycle for nitrogen metabolism?",
+        "choices": [
+            "Converts toxic ammonia to urea for safe excretion",
+            "Breaks down protein into amino acids",
+            "Synthesizes non-essential amino acids",
+            "Stores nitrogen in the liver as amino acids"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define rumen degradable protein (RDP).",
+        "choices": [
+            "Protein broken down in the rumen by microbes",
+            "Protein bypassing the rumen",
+            "Protein only absorbed in small intestine",
+            "Protein that is completely indigestible"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define rumen undegradable protein (RUP).",
+        "choices": [
+            "Protein that escapes rumen degradation and is digested in the small intestine",
+            "Protein fully degraded in the rumen",
+            "Protein converted to ammonia",
+            "Protein excreted in feces unchanged"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define microbial [crude] protein (MCP).",
+        "choices": [
+            "Protein synthesized by rumen microbes from RDP",
+            "Protein found in feed only",
+            "Byproduct of urea metabolism",
+            "Indigestible protein in fiber"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define metabolizable protein (MP).",
+        "choices": [
+            "Protein available for absorption in the small intestine from RUP + MCP",
+            "Protein only in feed that reaches rumen",
+            "Protein lost in urine",
+            "Total nitrogen in feces"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the major factors that affect microbial protein synthesis in ruminants?",
+        "choices": [
+            "Rumen degradable protein availability, energy supply, rumen pH, passage rate",
+            "Water intake, body weight, age, breed",
+            "Mineral intake only",
+            "Feed color, taste, and odor"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 7 physiological roles of lipids.",
+        "choices": [
+            "Energy storage, cell membrane structure, insulation, hormone synthesis, vitamin transport, cushioning, signaling",
+            "Only energy storage and insulation",
+            "Provide protein and minerals",
+            "Aid in digestion of carbohydrates only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the general structure of a triglyceride, diglyceride, and monoglyceride?",
+        "choices": [
+            "Glycerol backbone + 3, 2, or 1 fatty acids respectively",
+            "Glycerol backbone + 1, 2, or 3 amino acids respectively",
+            "Fatty acid chain only; length differs",
+            "Glycerol + phosphate only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the difference between a free fatty acid and an esterified fatty acid?",
+        "choices": [
+            "Free fatty acid is unbound; esterified is bound to glycerol",
+            "Free fatty acid has double bonds; esterified has none",
+            "Free fatty acid is saturated; esterified is unsaturated",
+            "No difference; terms are interchangeable"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which type of fatty acids are pro-inflammatory, and which are anti-inflammatory?",
+        "choices": [
+            "Omega-6: pro-inflammatory; Omega-3: anti-inflammatory",
+            "Omega-3: pro-inflammatory; Omega-6: anti-inflammatory",
+            "Saturated: anti-inflammatory; unsaturated: pro-inflammatory",
+            "Trans fats: anti-inflammatory; cis fats: pro-inflammatory"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which end of a fatty acid do you begin counting from using the delta counting scheme? What about the omega counting scheme?",
+        "choices": [
+            "Delta: carboxyl end; Omega: methyl end",
+            "Delta: methyl end; Omega: carboxyl end",
+            "Both start from carboxyl end",
+            "Both start from methyl end"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the common name for the following fatty acids: C16:0, C18:0, C18:1, C18:3, C20:4, C20:5, C22:6?",
+        "choices": [
+            "Palmitic, stearic, oleic, linolenic, arachidonic, EPA, DHA",
+            "Palmitic, linoleic, oleic, linolenic, arachidic, EPA, DHA",
+            "Stearic, palmitic, linoleic, oleic, EPA, DHA, arachidonic",
+            "Oleic, linoleic, palmitic, arachidonic, stearic, EPA, DHA"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Antioxidants prevent which type of rancidity of fats?",
+        "choices": [
+            "Oxidative rancidity",
+            "Hydrolytic rancidity",
+            "Thermal rancidity",
+            "All rancidity types equally"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the difference between saturated and unsaturated fats? How does saturation affect melting point and oxidation?",
+        "choices": [
+            "Saturated: no double bonds, higher melting point, less prone to oxidation; Unsaturated: double bonds, lower melting point, more prone to oxidation",
+            "Saturated: double bonds, lower melting point; Unsaturated: no double bonds, higher melting point",
+            "No difference in structure or oxidation",
+            "Saturated: cis bonds; Unsaturated: trans bonds only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the symptoms of dietary fat deficiency?",
+        "choices": [
+            "Poor growth, dry coat, skin lesions, reduced reproduction, poor fat-soluble vitamin absorption",
+            "Increased energy, excessive fat deposition",
+            "No effect on health",
+            "Only affects carbohydrate digestion"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "How does age affect the relative amount of body water in animals?",
+        "choices": [
+            "Young animals have higher body water % than older animals",
+            "Older animals have higher body water % than young animals",
+            "Body water % does not change with age",
+            "Only species affects body water %, not age"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the main functions of water in animals?",
+        "choices": [
+            "Solvent, transport nutrients, temperature regulation, lubrication, chemical reactions",
+            "Only solvent and transport nutrients",
+            "Energy storage and insulation",
+            "Provides protein and fat"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What factors affect water intake in animals?",
+        "choices": [
+            "Diet type, temperature, physiological state, activity level",
+            "Color of feed, water container shape, sound, odor",
+            "Species only",
+            "Season only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 4 contaminants that can affect water quality and their typical sources.",
+        "choices": [
+            "Bacteria (feces), nitrates (fertilizer), heavy metals (industrial), pesticides (runoff)",
+            "Sugar (feed), vitamins (supplements), oxygen (air), protein (soil)",
+            "Salt (grass), fiber (straw), starch (grain), fat (oil)",
+            "Only bacteria affect water; no other contaminants"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which units are vitamins measured in?",
+        "choices": [
+            "International Units (IU) and mg",
+            "Calories and Joules",
+            "Percent body weight",
+            "Liters per kg feed"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the 4 fat-soluble vitamins?",
+        "choices": [
+            "A, D, E, K",
+            "B1, B2, B12, C",
+            "C, B6, B9, H",
+            "A, C, B, D"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name all the water-soluble vitamins.",
+        "choices": [
+            "B-complex vitamins and vitamin C",
+            "A, D, E, K",
+            "Only vitamin C",
+            "B1 and B2 only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Match each vitamin with its common and full name (e.g., vitamin A -> Retinol).",
+        "choices": [
+            "A-Retinol, D-Cholecalciferol, E-Tocopherol, K-Phylloquinone, B1-Thiamine, B2-Riboflavin, B3-Niacin, B5-Pantothenic acid, B6-Pyridoxine, B7-Biotin, B9-Folic acid, B12-Cobalamin, C-Ascorbic acid",
+            "A-Vitamin A, D-Vitamin D, E-Vitamin E, K-Vitamin K only",
+            "Only fat-soluble vitamins have full names",
+            "All B vitamins are Ascorbic acid"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "On average, what is the shelf life of vitamin mixes and vitamin trace-mineral premixes?",
+        "choices": [
+            "Vitamin mixes: 3-6 months; Trace-mineral premixes: 6-12 months",
+            "Vitamin mixes: 1 month; Trace-mineral premixes: 2 months",
+            "Vitamin mixes: 1-2 years; Trace-mineral premixes: 5 years",
+            "Shelf life is unlimited if stored dry"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the role of vitamin A?",
+        "choices": [
+            "Vision, epithelial tissue maintenance, reproduction, growth",
+            "Energy metabolism only",
+            "Water absorption",
+            "Rumen microbial growth"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 1 deficiency symptom of vitamin A.",
+        "choices": [
+            "Night blindness",
+            "Rickets",
+            "Scurvy",
+            "Muscle tremors"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which vitamin is most likely to be toxic within an animal?",
+        "choices": [
+            "Vitamin A",
+            "Vitamin C",
+            "Vitamin B12",
+            "Vitamin K"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the roles of vitamin D?",
+        "choices": [
+            "Calcium and phosphorus metabolism, bone formation",
+            "Blood clotting only",
+            "Antioxidant",
+            "Energy metabolism"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name two deficiencies of vitamin D.",
+        "choices": [
+            "Rickets, osteomalacia",
+            "Scurvy, night blindness",
+            "Anemia, goiter",
+            "Hair loss, skin lesions"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are 3 major functions of vitamin E?",
+        "choices": [
+            "Antioxidant, immune function, reproduction",
+            "Bone formation, blood clotting, vision",
+            "Energy metabolism, protein synthesis, water balance",
+            "Calcium absorption, fat digestion, thermoregulation"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 3 natural sources of vitamin D.",
+        "choices": [
+            "Sunlight (UV synthesis), fish oil, fortified feeds",
+            "Green leafy vegetables only",
+            "Citrus fruits only",
+            "Legumes, grains, seeds"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "The active form of which vitamin is synthesized in the skin in the presence of UV light?",
+        "choices": [
+            "Vitamin D",
+            "Vitamin A",
+            "Vitamin E",
+            "Vitamin K"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which mineral is associated with vitamin E?",
+        "choices": [
+            "Selenium",
+            "Iron",
+            "Zinc",
+            "Calcium"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 1 deficiency symptom of vitamin E.",
+        "choices": [
+            "White muscle disease",
+            "Rickets",
+            "Night blindness",
+            "Scurvy"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which vitamin is responsible for blood coagulation/clotting?",
+        "choices": [
+            "Vitamin K",
+            "Vitamin D",
+            "Vitamin C",
+            "Vitamin E"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Dicoumarol in moldy sweet clover is an antagonist for vitamin K. What does it cause?",
+        "choices": [
+            "Internal bleeding",
+            "Rickets",
+            "Scurvy",
+            "White muscle disease"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which B vitamin can only be synthesized by microbes?",
+        "choices": [
+            "B12 (Cobalamin)",
+            "B1 (Thiamine)",
+            "B2 (Riboflavin)",
+            "B3 (Niacin)"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "How does basal metabolic rate affect the requirement for B vitamins?",
+        "choices": [
+            "Higher BMR increases B vitamin requirement",
+            "BMR does not affect B vitamin requirement",
+            "Higher BMR decreases B vitamin requirement",
+            "B vitamins are unrelated to metabolism"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Pellagra, red tongue, and black tongue are deficiency symptoms of which B vitamin?",
+        "choices": [
+            "Niacin (B3)",
+            "Thiamine (B1)",
+            "Riboflavin (B2)",
+            "Cobalamin (B12)"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the role of choline in fat metabolism?",
+        "choices": [
+            "Acts as a methyl donor and supports fat transport via VLDL",
+            "Acts as an antioxidant only",
+            "Helps synthesize amino acids only",
+            "Regulates water balance only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Rank the vitamin C requirement of the following animals: horses, guinea pigs, cows, pigs.",
+        "choices": [
+            "Guinea pigs > horses > pigs > cows",
+            "Cows > pigs > horses > guinea pigs",
+            "Horses > cows > pigs > guinea pigs",
+            "All have the same requirement"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define homeostasis and homeorhesis.",
+        "choices": [
+            "Homeostasis: maintenance of internal conditions; Homeorhesis: coordinated change to support physiological state",
+            "Homeostasis: energy intake; Homeorhesis: energy expenditure",
+            "Homeostasis: hormone secretion; Homeorhesis: digestion",
+            "Homeostasis and homeorhesis are the same"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the major roles of insulin in metabolism?",
+        "choices": [
+            "Promotes glucose uptake, glycogen synthesis, fat and protein synthesis",
+            "Breaks down glycogen and fat",
+            "Stimulates glucagon release",
+            "Inhibits all nutrient uptake"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "How is insulin resistance a homeorhetic response to giving birth in mammals?",
+        "choices": [
+            "Reduces glucose uptake in peripheral tissues to prioritize milk production",
+            "Increases fat storage only",
+            "Prevents protein synthesis",
+            "Enhances insulin sensitivity to store energy"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the etiology of ketosis and fatty liver in dairy cows and sheep?",
+        "choices": [
+            "Negative energy balance postpartum leads to fat mobilization, excess NEFA → ketone bodies and liver fat accumulation",
+            "High carbohydrate intake causes ketosis",
+            "Excess protein intake causes fatty liver",
+            "Deficiency of insulin prevents ketosis"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "How does glucagon alter metabolism?",
+        "choices": [
+            "Stimulates glycogenolysis, gluconeogenesis, and lipolysis",
+            "Increases fat storage",
+            "Stimulates insulin release only",
+            "Reduces blood glucose"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "How do glucocorticoids affect metabolism? Name 1 major glucocorticoid.",
+        "choices": [
+            "Increase gluconeogenesis, protein catabolism, fat mobilization; cortisol",
+            "Decrease glucose; epinephrine",
+            "Promote fat storage only; insulin",
+            "Stimulate glycogen synthesis; glucagon"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is another name for somatotropin? How does it affect metabolism?",
+        "choices": [
+            "Growth hormone; promotes growth, protein synthesis, and fat mobilization",
+            "Insulin; promotes glucose uptake",
+            "Glucagon; increases blood glucose",
+            "Cortisol; promotes catabolism"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which hormone is responsible for increasing the secretion of IGF-1?",
+        "choices": [
+            "Growth hormone (somatotropin)",
+            "Insulin",
+            "Glucagon",
+            "Cortisol"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which hormones are responsible for setting basal metabolic rate?",
+        "choices": [
+            "Thyroid hormones (T3, T4)",
+            "Insulin and glucagon",
+            "Cortisol and epinephrine",
+            "Growth hormone and IGF-1"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the two major catecholamines? Their role in metabolism? Feed additive agonist?",
+        "choices": [
+            "Epinephrine and norepinephrine; stimulate glycogenolysis and lipolysis; beta-agonists",
+            "Dopamine and serotonin; increase feed intake; probiotics",
+            "Cortisol and aldosterone; inhibit fat mobilization; ionophores",
+            "Insulin and glucagon; regulate glucose; niacin"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define hunger, satiety, and satiation.",
+        "choices": [
+            "Hunger: drive to eat; Satiety: feeling of fullness between meals; Satiation: meal termination",
+            "Hunger: full stomach; Satiety: appetite; Satiation: dehydration",
+            "Hunger: thirst; Satiety: hunger; Satiation: sleepiness",
+            "All are the same"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "From an animal standpoint, what is generally the major factor driving feed intake?",
+        "choices": [
+            "Energy (carbohydrates/fats)",
+            "Protein only",
+            "Vitamins",
+            "Water"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which region of the brain integrates feed intake signals to regulate hunger and satiety?",
+        "choices": [
+            "Hypothalamus",
+            "Cerebellum",
+            "Medulla oblongata",
+            "Hippocampus"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Major animal/production factors that regulate feed intake?",
+        "choices": [
+            "Body weight, growth rate, lactation, gestation; increase/decrease intake depending on demand",
+            "Color of feed only",
+            "Time of day only",
+            "Presence of predators only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "How do heat stress and cold stress affect feed intake?",
+        "choices": [
+            "Heat stress decreases intake; cold stress increases intake",
+            "Heat stress increases intake; cold stress decreases intake",
+            "Both increase intake",
+            "Both decrease intake"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "How do gut fill, SCFA, blood glucose, digest pH, and digesta osmolarity impact feed intake?",
+        "choices": [
+            "Gut fill: decreases intake; SCFA: satiety signal; High glucose: reduces intake; Low pH or high osmolarity: reduces intake",
+            "Gut fill increases intake; SCFA stimulate hunger",
+            "High glucose increases intake; low pH stimulates appetite",
+            "No effect on feed intake"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Where are insulin, glucagon, and amylin secreted? How do they affect feed intake?",
+        "choices": [
+            "Secreted by pancreatic islets; insulin and amylin decrease intake, glucagon increases blood glucose",
+            "Secreted by liver; all increase intake",
+            "Secreted by hypothalamus; all decrease intake",
+            "Secreted by adipose tissue; no effect on intake"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 3 gut peptides that reduce feed intake. Name 1 that increases feed intake.",
+        "choices": [
+            "CCK, GLP-1, PYY reduce intake; ghrelin increases intake",
+            "Insulin, glucagon, leptin reduce; amylin increases",
+            "Cortisol, epinephrine, T3 reduce; T4 increases",
+            "None of the above"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 2 adipokines. How do they affect feed intake and role in weight balance?",
+        "choices": [
+            "Leptin: decreases intake; adiponectin: improves insulin sensitivity",
+            "Insulin: increases intake; glucagon: decreases intake",
+            "Cortisol: decreases intake; epinephrine: increases intake",
+            "Ghrelin: decreases intake; CCK: increases intake"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which mineral is the most abundant in the body?",
+        "choices": [
+            "Calcium",
+            "Phosphorus",
+            "Magnesium",
+            "Sodium"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 3 major roles of calcium.",
+        "choices": [
+            "Bone/teeth formation, muscle contraction, blood clotting",
+            "Energy storage, enzyme activation, antioxidant",
+            "Protein synthesis, nerve transmission, fat transport",
+            "Vision, skin maintenance, vitamin absorption"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which vitamin is required for calcium absorption?",
+        "choices": [
+            "Vitamin D",
+            "Vitamin A",
+            "Vitamin K",
+            "Vitamin E"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the name of the acid that can bind to phosphorus and inhibit its bioavailability? Which category of animals is not affected by this?",
+        "choices": [
+            "Phytate; ruminants are less affected; strategies: phytase enzyme, low-phytate grains",
+            "Oxalic acid; all animals are equally affected",
+            "Citric acid; monogastrics only affected",
+            "Lactic acid; poultry only affected"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What should the Ca:P ratio be in diets of non-ruminants, ruminants, and poultry?",
+        "choices": [
+            "Non-ruminants: 1.1-1.5:1; Ruminants: 1-2:1; Poultry: 2:1",
+            "Non-ruminants: 2:1; Ruminants: 1:1; Poultry: 1:1",
+            "Non-ruminants: 1:2; Ruminants: 2:1; Poultry: 1.5:1",
+            "All species: 1:1"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 1 symptom of calcium deficiency in young growing animals, lactating animals, and chickens.",
+        "choices": [
+            "Young: rickets; Lactating: milk fever; Chickens: soft eggshells",
+            "Young: scurvy; Lactating: anemia; Chickens: feather loss",
+            "Young: night blindness; Lactating: rickets; Chickens: black tongue",
+            "All species: diarrhea"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 1 deficiency symptom of magnesium.",
+        "choices": [
+            "Grass tetany",
+            "White muscle disease",
+            "Rickets",
+            "Goiter"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the 3 major electrolytes fed to animals and their role?",
+        "choices": [
+            "Sodium, potassium, chloride; maintain osmotic balance and nerve/muscle function",
+            "Calcium, magnesium, phosphorus; energy metabolism only",
+            "Iron, zinc, copper; antioxidant role",
+            "Sulfur, selenium, iodine; growth promotion only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which mineral is a component of methionine, thiamin, and biotin?",
+        "choices": [
+            "Sulfur",
+            "Copper",
+            "Zinc",
+            "Iron"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is an 'organic' trace mineral?",
+        "choices": [
+            "Mineral bound to an organic molecule such as amino acids or proteins",
+            "Mineral from plant sources only",
+            "Mineral in inorganic salts",
+            "Mineral synthesized chemically in the lab"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which mineral is a part of hemoglobin?",
+        "choices": [
+            "Iron",
+            "Copper",
+            "Zinc",
+            "Selenium"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 2 deficiencies of copper.",
+        "choices": [
+            "Anemia, swayback (neurological)",
+            "Rickets, scurvy",
+            "White muscle disease, milk fever",
+            "Goiter, grass tetany"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which trace mineral is crucial for the function of alcohol dehydrogenase?",
+        "choices": [
+            "Zinc",
+            "Selenium",
+            "Copper",
+            "Manganese"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which species of animal is most highly susceptible to copper toxicity?",
+        "choices": [
+            "Sheep",
+            "Cattle",
+            "Pigs",
+            "Poultry"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which antioxidant is selenium a part of?",
+        "choices": [
+            "Glutathione peroxidase",
+            "Vitamin E",
+            "Vitamin C",
+            "Superoxide dismutase"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which vitamin has overlapping functions with selenium?",
+        "choices": [
+            "Vitamin E",
+            "Vitamin D",
+            "Vitamin A",
+            "Vitamin K"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 2 deficiencies of selenium.",
+        "choices": [
+            "White muscle disease, retained placenta",
+            "Rickets, scurvy",
+            "Milk fever, anemia",
+            "Goiter, night blindness"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which hormone is iodine part of?",
+        "choices": [
+            "Thyroid hormones (T3, T4)",
+            "Insulin",
+            "Glucagon",
+            "Parathyroid hormone"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What disease is caused by an iodine deficiency?",
+        "choices": [
+            "Goiter",
+            "Rickets",
+            "Scurvy",
+            "White muscle disease"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 3 feeds that can lead to goiter because they contain compounds that antagonize iodine.",
+        "choices": [
+            "Cabbage, kale, soybeans",
+            "Corn, oats, barley",
+            "Alfalfa, clover, ryegrass",
+            "Wheat, rice, sorghum"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which B vitamin is cobalt an important component of?",
+        "choices": [
+            "Vitamin B12 (Cobalamin)",
+            "Vitamin B1 (Thiamine)",
+            "Vitamin B2 (Riboflavin)",
+            "Vitamin B6 (Pyridoxine)"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the major roles of saliva?",
+        "choices": [
+            "Lubrication, moistening feed, initiating starch digestion, buffering pH",
+            "Hormone secretion only",
+            "Protein storage",
+            "Fat absorption"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the major roles of the stomach?",
+        "choices": [
+            "Mechanical breakdown, chemical digestion of proteins, storage of ingesta",
+            "Fat absorption only",
+            "Carbohydrate absorption only",
+            "Water storage only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is secreted into the stomach to aid in digestion?",
+        "choices": [
+            "Hydrochloric acid, pepsinogen, mucus",
+            "Bile and lipase",
+            "Amylase only",
+            "Insulin and glucagon"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What hormone(s) are secreted by the stomach and their function?",
+        "choices": [
+            "Gastrin stimulates HCl secretion; ghrelin stimulates appetite",
+            "Insulin and glucagon regulate blood sugar",
+            "Secretin stimulates bile release",
+            "Cholecystokinin (CCK) inhibits appetite"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the 3 regions of the stomach and their roles?",
+        "choices": [
+            "Cardiac: mucus; Fundus: acid & pepsinogen; Pyloric: hormone secretion",
+            "Duodenum, jejunum, ileum",
+            "Cecum, colon, rectum",
+            "Esophagus, rumen, reticulum"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is a zymogen?",
+        "choices": [
+            "Inactive enzyme precursor that requires activation",
+            "Fully active digestive enzyme",
+            "Hormone",
+            "Lipid molecule"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the major roles of the small intestine?",
+        "choices": [
+            "Chemical digestion, nutrient absorption",
+            "Water storage only",
+            "Fat storage only",
+            "Starch storage only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is secreted into the small intestine to aid digestion?",
+        "choices": [
+            "Bile, pancreatic enzymes, mucus",
+            "Hydrochloric acid only",
+            "Saliva only",
+            "Gastrin only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the role of the gall bladder?",
+        "choices": [
+            "Stores and releases bile, which emulsifies fats",
+            "Stores digestive enzymes for protein only",
+            "Stores starch for later absorption",
+            "Secretes insulin into the bloodstream"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the 3 sections of the small intestine and their roles?",
+        "choices": [
+            "Duodenum: digestion; Jejunum: nutrient absorption; Ileum: absorption & immune function",
+            "Rumen, reticulum, omasum",
+            "Cecum, colon, rectum",
+            "Esophagus, stomach, duodenum"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which section of the small intestine is densely populated by immune cells?",
+        "choices": [
+            "Ileum",
+            "Duodenum",
+            "Jejunum",
+            "Pylorus"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What structures in the small intestine increase surface area for absorption?",
+        "choices": [
+            "Villi and microvilli",
+            "Cilia",
+            "Rugae",
+            "Crypts only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define emulsification in lipid digestion and which secretions help this process.",
+        "choices": [
+            "Breaking fat into small droplets; bile from liver/gall bladder",
+            "Protein hydrolysis; pepsin from stomach",
+            "Starch breakdown; amylase from saliva",
+            "Fat hydrolysis; lipase from pancreas only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the major roles of the large intestine?",
+        "choices": [
+            "Water absorption, microbial fermentation, feces formation",
+            "Protein digestion only",
+            "Vitamin absorption only",
+            "Fat absorption only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which molecules is starch broken down into?",
+        "choices": [
+            "Glucose",
+            "Amino acids",
+            "Fatty acids",
+            "Nucleotides"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name one enzyme that breaks down protein, one that breaks down fat, and one that breaks down starch.",
+        "choices": [
+            "Pepsin: protein; Lipase: fat; Amylase: starch",
+            "Amylase: protein; Lipase: starch; Pepsin: fat",
+            "Lipase: protein; Amylase: fat; Pepsin: starch",
+            "Trypsin: fat; Maltase: protein; Lactase: starch"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which glucose transporter brings glucose into an enterocyte? What about fructose? Which moves glucose from enterocyte to circulation?",
+        "choices": [
+            "SGLT1: glucose into cell; GLUT5: fructose into cell; GLUT2: glucose to blood",
+            "GLUT2: glucose in; SGLT1: fructose in; GLUT5: glucose out",
+            "GLUT5: glucose in; GLUT2: fructose in; SGLT1: glucose out",
+            "SGLT1: fructose in; GLUT5: glucose in; GLUT2: glucose out"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the roles of gastrin and ghrelin in the digestive tract?",
+        "choices": [
+            "Gastrin: stimulates HCl secretion; Ghrelin: stimulates appetite",
+            "Both inhibit acid secretion",
+            "Both decrease feed intake",
+            "Gastrin: fat digestion; Ghrelin: protein digestion"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the role of incretins and the major incretins produced in the small intestine?",
+        "choices": [
+            "Enhance insulin secretion after meals; GIP and GLP-1",
+            "Decrease insulin secretion; CCK and PYY",
+            "Stimulate bile release; secretin only",
+            "Increase glucagon secretion; gastrin only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What do CCK and PYY do in relationship to feed intake?",
+        "choices": [
+            "They reduce feed intake by signaling satiety",
+            "They increase feed intake",
+            "They stimulate fat absorption only",
+            "They have no role in feed intake"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the role of incretins in nutrient metabolism? Identify one incretin.",
+        "choices": [
+            "Enhance insulin secretion in response to meals; example: GLP-1",
+            "Stimulate glucagon only; example: ghrelin",
+            "Inhibit insulin secretion; example: CCK",
+            "Increase appetite only; example: PYY"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the 4 compartments of a ruminant stomach and their roles?",
+        "choices": [
+            "Rumen: fermentation; Reticulum: particle sorting; Omasum: water absorption; Abomasum: enzymatic digestion",
+            "Rumen: enzymatic digestion; Reticulum: water absorption; Omasum: fermentation; Abomasum: storage",
+            "Rumen: protein digestion; Reticulum: fat absorption; Omasum: vitamin synthesis; Abomasum: fiber digestion",
+            "Rumen: storage only; Reticulum: nutrient absorption; Omasum: fat digestion; Abomasum: fermentation"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What structures in the rumen increase surface area for absorption?",
+        "choices": [
+            "Papillae",
+            "Villi",
+            "Microvilli",
+            "Cecal folds"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the 4 major microbial groups in the rumen? Which have the most genetic diversity?",
+        "choices": [
+            "Bacteria, protozoa, fungi, archaea; bacteria have most genetic diversity",
+            "Bacteria, viruses, fungi, archaea; fungi have most diversity",
+            "Protozoa, fungi, viruses, bacteria; archaea have most diversity",
+            "Only bacteria and fungi are present"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Why can’t horses vomit?",
+        "choices": [
+            "Strong cardiac sphincter prevents retrograde flow",
+            "Small stomach size",
+            "Lack of stomach acid",
+            "Intestinal motility too slow"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "How does hindgut acidosis lead to inflammation and potentially laminitis in horses?",
+        "choices": [
+            "Excess fermentation lowers pH, kills beneficial microbes, releases endotoxins, triggers inflammation",
+            "Causes dehydration only",
+            "Leads to high fiber digestibility",
+            "Stimulates appetite"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which organ is enlarged in horses that helps digest fiber?",
+        "choices": [
+            "Cecum",
+            "Stomach",
+            "Duodenum",
+            "Liver"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the function of the crop in the chicken digestive tract?",
+        "choices": [
+            "Storage and moistening of feed",
+            "Protein digestion",
+            "Fat absorption",
+            "Excretion"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the function of the proventriculus in the chicken digestive tract?",
+        "choices": [
+            "Glandular stomach secreting HCl and enzymes",
+            "Mechanical grinding of feed",
+            "Nutrient absorption",
+            "Fermentation"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the function of the gizzard in the chicken digestive tract?",
+        "choices": [
+            "Mechanical grinding of feed using muscular contractions and grit",
+            "Enzymatic digestion of protein",
+            "Storage of bile",
+            "Water absorption"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the function of the 2 ceca in the large intestine of turkeys?",
+        "choices": [
+            "Fermentation of fiber and absorption of nutrients",
+            "Protein digestion",
+            "Vitamin storage only",
+            "Excretion of uric acid only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "How do chickens excrete nitrogen differently compared to mammals?",
+        "choices": [
+            "Excrete uric acid instead of urea",
+            "Excrete urea like mammals",
+            "Excrete ammonia directly like fish",
+            "Excrete nitrogen as amino acids"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the difference in the large intestine between avian species and mammals?",
+        "choices": [
+            "Avian large intestine has ceca for fermentation; mammal large intestine often larger and segmented for water absorption",
+            "Avian large intestine digests protein; mammal intestine digests fat",
+            "No difference; both have same structure",
+            "Avian large intestine stores bile; mammal large intestine stores water only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 2 units we measure energy in. How do you interconvert between those units?",
+        "choices": [
+            "Calories (cal) and Joules (J); 1 cal = 4.184 J",
+            "Watts and Newtons; 1 W = 1 N",
+            "Meters and liters; 1 m = 100 L",
+            "Volts and amps; 1 V = 1 A"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the difference between a calorie and a Calorie?",
+        "choices": [
+            "1 Calorie (dietary) = 1000 calories (small c)",
+            "Calorie is smaller than calorie",
+            "Calorie and calorie are exactly the same",
+            "Calorie measures fat, calorie measures protein"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 6 different forms that energy can take.",
+        "choices": [
+            "Chemical, heat, mechanical, electrical, nuclear, light",
+            "Protein, carbohydrate, fat, vitamin, mineral, water",
+            "Kinetic, potential only",
+            "ATP, ADP, AMP, NADH, FADH2, CoA"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define phototroph, lithotroph, and heterotroph. Which category do all animal species belong in?",
+        "choices": [
+            "Phototroph: uses light; Lithotroph: uses inorganic compounds; Heterotroph: uses organic compounds; animals are heterotrophs",
+            "Phototroph: uses protein; Lithotroph: uses lipids; Heterotroph: uses carbs; animals are lithotrophs",
+            "Phototroph: uses water; Lithotroph: uses sunlight; Heterotroph: uses minerals; animals are phototrophs",
+            "All animals are phototrophs"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is lost each time energy is transferred to another entity within an ecosystem?",
+        "choices": [
+            "Heat energy",
+            "Protein",
+            "Minerals",
+            "Water"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "If an animal is at neutral energy balance, what does that mean? Positive? Negative?",
+        "choices": [
+            "Neutral: intake = expenditure; Positive: intake > expenditure; Negative: intake < expenditure",
+            "Neutral: intake > expenditure; Positive: intake = expenditure; Negative: intake < expenditure",
+            "Neutral: intake < expenditure; Positive: intake = expenditure; Negative: intake > expenditure",
+            "Energy balance has no relation to intake or expenditure"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What happens if an animal is in negative or positive energy balance?",
+        "choices": [
+            "Negative: weight loss; Positive: weight gain",
+            "Negative: weight gain; Positive: weight loss",
+            "Negative: no effect; Positive: no effect",
+            "Both cause dehydration only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which approaches can be used to measure heat production from an animal?",
+        "choices": [
+            "Direct calorimetry, indirect calorimetry",
+            "Weighing the animal only",
+            "Blood sampling only",
+            "Observing feed intake only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define NEL, NEG, and NEM (fractions of net energy).",
+        "choices": [
+            "NEL: net energy for lactation; NEG: net energy for growth; NEM: net energy for maintenance",
+            "NEL: net energy for movement; NEG: net energy for glands; NEM: net energy for meat",
+            "NEL: nitrogen energy; NEG: neuter energy; NEM: net energy for metabolism",
+            "All are types of gross energy"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the equation to calculate energetic efficiency?",
+        "choices": [
+            "Energy efficiency = (Net energy / Metabolizable energy) × 100",
+            "Energy efficiency = Gross energy × 2",
+            "Energy efficiency = Digestible energy − heat loss",
+            "Energy efficiency = ME / DE × 1000"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Describe the general principle of why respiratory quotient can be used to estimate energy balance. Equation?",
+        "choices": [
+            "RQ = CO2 produced / O2 consumed; indicates type of substrate oxidized and energy metabolism",
+            "RQ = O2 produced / CO2 consumed; indicates protein only",
+            "RQ = CO2 + O2; indicates water balance",
+            "RQ = CO2 − O2; measures nitrogen excretion"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the major form of cellular energy?",
+        "choices": [
+            "ATP (adenosine triphosphate)",
+            "Glucose",
+            "NADH",
+            "FADH2"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are the alternative names for the TCA cycle?",
+        "choices": [
+            "Krebs cycle or citric acid cycle",
+            "Glycolysis or pentose phosphate pathway",
+            "Electron transport chain or oxidative phosphorylation",
+            "Calvin cycle or photosynthesis cycle"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Why is ATP generation during the electron transport chain called 'oxidative phosphorylation'?",
+        "choices": [
+            "Electrons from oxidation drive ATP synthesis via phosphorylation",
+            "ATP is oxidized to form phosphate",
+            "Phosphate is oxidized directly",
+            "Oxygen combines with glucose to form ATP"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Overall equation for aerobic respiration of glucose (inputs, outputs)?",
+        "choices": [
+            "C6H12O6 + 6O2 → 6CO2 + 6H2O + ~36-38 ATP",
+            "C6H12O6 → 2CO2 + 2H2O + 2 ATP",
+            "Glucose + NADH → ATP + CO2",
+            "Glucose → Lactate + 2 ATP"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "How many ATP are invested and generated in glycolysis?",
+        "choices": [
+            "Invested: 2 ATP; Generated: 4 ATP",
+            "Invested: 1 ATP; Generated: 3 ATP",
+            "Invested: 3 ATP; Generated: 6 ATP",
+            "Invested: 0 ATP; Generated: 2 ATP"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "How many high energy bonds are present in ATP?",
+        "choices": [
+            "2 high-energy phosphate bonds",
+            "1 high-energy bond",
+            "3 high-energy bonds",
+            "0 high-energy bonds"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "How many molecules of pyruvate are generated per molecule of glucose?",
+        "choices": [
+            "2 molecules of pyruvate",
+            "1 molecule",
+            "3 molecules",
+            "4 molecules"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which carbon-based molecule is the final product of complete glycolysis? Which enters TCA cycle?",
+        "choices": [
+            "Pyruvate; pyruvate is converted to Acetyl-CoA",
+            "Glucose; glucose enters TCA",
+            "Lactate; lactate enters TCA",
+            "Fructose; fructose enters TCA"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "In anaerobic conditions, which substance is produced from pyruvate?",
+        "choices": [
+            "Lactate",
+            "Acetyl-CoA",
+            "CO2",
+            "Oxaloacetate"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which substrate is converted to pyruvate by donating a phosphate to ADP to form ATP?",
+        "choices": [
+            "Phosphoenolpyruvate (PEP)",
+            "Glucose-6-phosphate",
+            "Fructose-1,6-bisphosphate",
+            "Citrate"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "First step of glycolysis that 'locks' glucose within cells?",
+        "choices": [
+            "Phosphorylation of glucose to glucose-6-phosphate",
+            "Conversion of glucose to pyruvate",
+            "Fructose phosphorylation",
+            "Glycogen synthesis"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which substrate must pyruvate be converted to before entering TCA cycle?",
+        "choices": [
+            "Acetyl-CoA",
+            "Lactate",
+            "Oxaloacetate",
+            "Citrate"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Where does glycolysis, TCA cycle, and oxidative phosphorylation take place?",
+        "choices": [
+            "Glycolysis: cytoplasm; TCA: mitochondria; OxPhos: mitochondrial inner membrane",
+            "All occur in cytoplasm",
+            "All occur in mitochondria",
+            "Glycolysis: mitochondria; TCA: cytoplasm; OxPhos: nucleus"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is Acetyl-CoA converted to first in the TCA cycle?",
+        "choices": [
+            "Citrate",
+            "Pyruvate",
+            "Oxaloacetate",
+            "Malate"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "How many total ATP are produced per molecule of glucose?",
+        "choices": [
+            "36-38 ATP",
+            "2 ATP",
+            "24 ATP",
+            "50 ATP"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Different substrates that can be used for gluconeogenesis?",
+        "choices": [
+            "Lactate, glycerol, amino acids",
+            "Only glucose",
+            "Fatty acids only",
+            "ATP and ADP"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Pathway that fats utilize to be converted into energy?",
+        "choices": [
+            "Beta-oxidation",
+            "Gluconeogenesis",
+            "Glycolysis",
+            "Pentose phosphate pathway"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the #1 most commonly fed energy feedstuff provided to livestock?",
+        "choices": [
+            "Corn",
+            "Barley",
+            "Wheat",
+            "Oats"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 5 energy concentrate feeds.",
+        "choices": [
+            "Corn, barley, wheat, oats, sorghum",
+            "Soybean meal, canola meal, cottonseed meal, fish meal, blood meal",
+            "Alfalfa, clover, ryegrass, timothy, fescue",
+            "Beet pulp, citrus pulp, soybean hulls, rice bran, distillers grains"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the #1 most commonly fed protein feed?",
+        "choices": [
+            "Soybean meal",
+            "Fish meal",
+            "Cottonseed meal",
+            "Blood meal"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 1 feed high in pectins and better for ruminants and hindgut fermenters than pigs/poultry.",
+        "choices": [
+            "Beet pulp",
+            "Corn gluten meal",
+            "Soybean meal",
+            "Oats"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 4 oilseed byproducts fed to provide protein in animal diets.",
+        "choices": [
+            "Soybean meal, canola meal, cottonseed meal, sunflower meal",
+            "Corn, barley, wheat, oats",
+            "Alfalfa, clover, ryegrass, timothy",
+            "Beet pulp, citrus pulp, rice bran, distillers grains"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Why are beet pulp and citrus pulp better feeds for ruminants than non-ruminants?",
+        "choices": [
+            "High in pectins and fermentable fiber, digested by microbes",
+            "High in starch, digested by pigs",
+            "High in protein, used by poultry",
+            "Low fiber, highly digestible by omnivores"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Based on amino acid profile alone, why include both soybean meal and corn in diets?",
+        "choices": [
+            "Soy provides limiting amino acids; corn complements profile",
+            "Corn provides vitamins only",
+            "Soy provides energy only",
+            "No benefit; redundant feeds"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 1 feed that can contain the toxic compound gossypol.",
+        "choices": [
+            "Cottonseed meal",
+            "Soybean meal",
+            "Corn gluten meal",
+            "Fish meal"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Are animal proteins or plant proteins better at providing correct amino acids for growth?",
+        "choices": [
+            "Animal proteins",
+            "Plant proteins",
+            "Both are equal",
+            "Neither"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is the nutritionally-relevant portion of the plant cell wall called?",
+        "choices": [
+            "Fiber",
+            "Starch",
+            "Protein",
+            "Pectin only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which molecules make up fiber and how do they differ in digestibility?",
+        "choices": [
+            "Cellulose, hemicellulose, lignin; cellulose most digestible, lignin indigestible",
+            "Starch, sugar, protein; starch indigestible, sugar digestible",
+            "Fat, protein, starch; all highly digestible",
+            "Pectin only; indigestible"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "How does forage species, growing conditions, planting density, genetics, and maturity influence lignin concentration?",
+        "choices": [
+            "Different species and older maturity increase lignin; high density or genetics can alter lignin",
+            "No effect on lignin",
+            "All factors reduce lignin",
+            "Only genetics affects lignin"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "How do particle size, ruminal pH, dietary fat and protein concentration influence fiber digestibility?",
+        "choices": [
+            "Smaller particle, optimal pH, moderate fat/protein improve fiber digestibility",
+            "All factors decrease digestibility",
+            "Particle size only matters",
+            "pH only matters"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are legumes and how do they fix atmospheric nitrogen?",
+        "choices": [
+            "Plants that host symbiotic rhizobia bacteria in roots to convert N2 to ammonia",
+            "Grass species that absorb nitrogen from soil",
+            "Trees that produce ammonia directly",
+            "Plants that produce nitrogen from protein"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 5 common grass species used in pastures or hay for livestock.",
+        "choices": [
+            "Timothy, orchardgrass, fescue, ryegrass, Bermuda grass",
+            "Soybean, alfalfa, clover, vetch, peas",
+            "Corn, sorghum, wheat, barley, oats",
+            "Beet pulp, citrus pulp, rice bran, hulls, molasses"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is a cover crop? Name 5 reasons why they are used.",
+        "choices": [
+            "Crop planted to protect soil; prevent erosion, improve soil fertility, suppress weeds, reduce N leaching, add organic matter",
+            "Crop harvested for feed; only for livestock nutrition",
+            "Crop grown for biofuel only",
+            "Crop planted in winter with no purpose"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are anthelmintics used to control, and provide 3 examples?",
+        "choices": [
+            "Control internal parasites; examples: ivermectin, fenbendazole, albendazole",
+            "Control bacteria; examples: penicillin, tetracycline, erythromycin",
+            "Control mold; examples: aflatoxin binders",
+            "Control coccidia; examples: amprolium, monensin, lasalocid"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "List the common antibiotic growth promotants used in feed.",
+        "choices": [
+            "Tylosin, virginiamycin, bacitracin",
+            "Ivermectin, fenbendazole, albendazole",
+            "Amprolium, monensin, lasalocid",
+            "Vitamin A, D, E"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Mycotoxin binders would most likely be added to feed when what is present?",
+        "choices": [
+            "Contaminated grains with mold/mycotoxins",
+            "Excess protein",
+            "High starch content",
+            "Low fiber feed"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Why are coccidiostats fed? Which organisms and disease do they control? Name 3 examples.",
+        "choices": [
+            "Prevent/control coccidiosis caused by Eimeria spp.; examples: amprolium, monensin, lasalocid",
+            "Prevent bacterial infections; examples: penicillin, tetracycline, bacitracin",
+            "Prevent fungal growth; examples: aflatoxin binders",
+            "Increase growth; examples: beta-agonists"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "How do ionophores modify rumen fermentation?",
+        "choices": [
+            "Shift microbial population to increase propionate, decrease acetate/methane",
+            "Increase lactic acid only",
+            "Decrease fiber digestion only",
+            "Increase ammonia production only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define probiotic and prebiotic. Give 3 examples of each.",
+        "choices": [
+            "Probiotic: live microbes; examples: Lactobacillus, Bifidobacterium, Saccharomyces; Prebiotic: non-digestible compounds stimulating microbes; examples: inulin, FOS, MOS",
+            "Probiotic: vitamins; examples: A, D, E; Prebiotic: minerals; examples: Ca, P, Mg",
+            "Probiotic: antibiotics; examples: tylosin, bacitracin; Prebiotic: buffers; examples: NaHCO3",
+            "Probiotic: enzymes; Prebiotic: antioxidants"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Difference between a buffer and an alkalizer. Why use both? Example of each.",
+        "choices": [
+            "Buffer resists pH change; alkalizer raises pH; both stabilize rumen; example buffer: NaHCO3, example alkalizer: MgO",
+            "Buffer increases pH; alkalizer decreases pH; example: both NaOH",
+            "Buffer and alkalizer are the same; example: CaCO3",
+            "Buffer reduces protein; alkalizer increases protein; example: urea"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 2 enzymes added to livestock diets and why enzymes are used.",
+        "choices": [
+            "Phytase, xylanase; improve nutrient digestibility and feed efficiency",
+            "Lipase, amylase; reduce feed intake only",
+            "Protease, cellulase; used to kill microbes",
+            "Lactase, sucrase; prevent vitamin deficiency"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "How do beta-adrenergic agonists alter nutrient partitioning?",
+        "choices": [
+            "Increase muscle growth, reduce fat deposition",
+            "Increase fat deposition only",
+            "Decrease protein synthesis",
+            "Increase feed intake only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which hormone does MGA mimic to prevent reproductive cycling?",
+        "choices": [
+            "Progesterone",
+            "Estrogen",
+            "Testosterone",
+            "Cortisol"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Why are estrous suppressants fed to some livestock?",
+        "choices": [
+            "To prevent unwanted cycling and optimize reproductive management",
+            "To increase feed intake",
+            "To prevent growth",
+            "To improve digestion"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Antioxidants are most commonly added to feeds high in which nutrient?",
+        "choices": [
+            "Fats/lipids",
+            "Protein",
+            "Carbohydrates",
+            "Fiber"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Provide 2 examples of common antioxidants added to diets.",
+        "choices": [
+            "Vitamin E, BHT",
+            "Vitamin A, D",
+            "Calcium, phosphorus",
+            "Lactose, glucose"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What can be added to feeds to inhibit mold growth?",
+        "choices": [
+            "Fungicides or mold inhibitors",
+            "Probiotics",
+            "Ionophores",
+            "Buffers"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Provide 1 example of a common pellet binder.",
+        "choices": [
+            "Lignosulfonate",
+            "Sodium bicarbonate",
+            "Xylanase",
+            "Vitamin A"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name the 7 items required on feed labels according to the Association of American Feed Control Officials (AAFCO).",
+        "choices": [
+            "Product name, purpose, guaranteed analysis, ingredient list, feeding directions, net weight, manufacturer info",
+            "Calories, vitamins, minerals, fiber, fat, protein, moisture",
+            "Price, origin, color, shape, taste, texture, smell",
+            "Expiration date, storage conditions, barcode, batch number, weight, manufacturer, feed type"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Advantages and disadvantages of hammer milling?",
+        "choices": [
+            "Advantages: flexible particle size, high throughput; Disadvantages: high energy, heat generation",
+            "Advantages: low cost, no dust; Disadvantages: low throughput",
+            "Advantages: improves vitamin content; Disadvantages: reduces fat digestibility",
+            "No advantages; only disadvantage is cost"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Advantages and disadvantages of roller milling?",
+        "choices": [
+            "Advantages: consistent particle size, less energy; Disadvantages: less flexible, lower throughput",
+            "Advantages: very cheap; Disadvantages: destroys vitamins",
+            "Advantages: improves protein; Disadvantages: reduces energy",
+            "No advantages; only disadvantage is particle size"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Why is steam added during steam flaking and steam rolling?",
+        "choices": [
+            "To soften grains and gelatinize starch to improve digestibility",
+            "To dry the grains",
+            "To add flavor",
+            "To reduce protein content"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Why does gelatinization of starch particles improve digestibility?",
+        "choices": [
+            "Breaks crystalline structure allowing enzymes easier access",
+            "Removes fiber",
+            "Adds protein to starch",
+            "Reduces moisture content"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Difference between steam flaking and steam rolling?",
+        "choices": [
+            "Flaking produces thin flakes; rolling crushes grains into smaller particles",
+            "Flaking dries grains; rolling steams them",
+            "Flaking increases protein; rolling decreases fat",
+            "No difference"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What does a Ro-Tap shaker measure in grain processing?",
+        "choices": [
+            "Particle size distribution",
+            "Moisture content",
+            "Protein content",
+            "Starch digestibility"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Difference between solvent extraction and expeller extraction of oilseeds?",
+        "choices": [
+            "Solvent: more oil removed, lower residual fat; Expeller: less oil removed, higher residual fat",
+            "Solvent: no oil removed; Expeller: all oil removed",
+            "Both remove same oil, difference is temperature",
+            "Solvent uses heat; expeller uses chemicals only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Reaction when feedstuff is overheated, biochemical change, and nutrient digestibility effect?",
+        "choices": [
+            "Maillard reaction; amino acids react with sugars; reduces protein digestibility",
+            "Hydrolysis; starch breaks down; increases digestibility",
+            "Oxidation; fats degrade; improves digestibility",
+            "Fermentation; sugars convert to alcohol; no effect on protein"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Advantages and disadvantages of pelleting feed?",
+        "choices": [
+            "Advantages: reduces dust, improves intake, uniformity, less sorting, better storage, easier transport, increases digestibility; Disadvantages: cost, energy, heat damage, fines, risk of mold",
+            "Advantages: cheaper; Disadvantages: reduces digestibility only",
+            "Advantages: adds flavor; Disadvantages: reduces protein",
+            "No advantages; only disadvantages exist"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 3 major types of wet feed processing.",
+        "choices": [
+            "Ensiling, wet milling, extrusion",
+            "Pelleting, grinding, hammer milling",
+            "Roasting, boiling, steaming",
+            "None of the above"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which feed processing method applies heat and pressure with a tapered screw to create flakes?",
+        "choices": [
+            "Steam flaking",
+            "Hammer milling",
+            "Roller milling",
+            "Pelleting"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "6 reasons land would be used for grazing vs. crop production?",
+        "choices": [
+            "Soil unsuitable for crops, reduce feed costs, livestock nutrition, erosion control, biodiversity, pasture rotation",
+            "Only cost savings",
+            "Only climate adaptation",
+            "Only reduce weeds"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "How does nutrient composition of pastures change across growing season?",
+        "choices": [
+            "Protein and energy highest in early growth, fiber increases as plant matures",
+            "No change",
+            "Fiber decreases with maturity",
+            "Protein decreases but energy increases"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Difference between intensive and extensive grazing?",
+        "choices": [
+            "Intensive: high stocking, frequent rotation; Extensive: low stocking, minimal management",
+            "Intensive: low stocking; Extensive: high stocking",
+            "No difference",
+            "Intensive uses only legumes; extensive uses grasses"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define deferment, rest, and rotation in grazing context.",
+        "choices": [
+            "Deferment: delay grazing; Rest: allow recovery; Rotation: move livestock between paddocks",
+            "Deferment: reduce feed; Rest: stop feeding; Rotation: feed crops",
+            "All same meaning",
+            "Deferment: harvest crops; Rest: feed hay; Rotation: change pasture species"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "6 common nutritional diseases associated with grazing and 1 symptom each.",
+        "choices": [
+            "Bloat (distended rumen), grass tetany (muscle twitch), nitrate poisoning (dyspnea), pasture bloat (colic), selenium deficiency (white muscle), photosensitization (skin lesions)",
+            "Vitamin A deficiency only",
+            "Protein deficiency only",
+            "No diseases in pastures"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Why is rotational grazing done?",
+        "choices": [
+            "Maintain pasture quality, prevent overgrazing, improve forage regrowth",
+            "Increase feed intake only",
+            "Reduce labor only",
+            "Prevent disease only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "4 grazing strategies to maintain pasture quality?",
+        "choices": [
+            "Rotational, strip, mob, continuous",
+            "Overgrazing, undergrazing, haying, silage",
+            "Intensive, extensive, mixed, organic",
+            "None of the above"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define utilization in context of forage consumption.",
+        "choices": [
+            "Proportion of forage consumed vs. available",
+            "Total pasture size",
+            "Growth rate of animals",
+            "Moisture content of forage"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define harvest efficiency in forage consumption.",
+        "choices": [
+            "Proportion of forage actually harvested or eaten by livestock",
+            "Forage regrowth rate",
+            "Feedlot intake",
+            "Pasture fertility"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Top 5 major export markets for U.S. animal feed?",
+        "choices": [
+            "Mexico, Canada, Japan, South Korea, China",
+            "Brazil, Argentina, UK, Germany, India",
+            "Russia, France, Spain, Italy, Australia",
+            "Only Mexico and Canada"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Which feed ingredient is primary driver of energy ingredient price? And for protein ingredients?",
+        "choices": [
+            "Energy: corn; Protein: soybean meal",
+            "Energy: wheat; Protein: fish meal",
+            "Energy: oats; Protein: cottonseed meal",
+            "Energy: barley; Protein: blood meal"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "List 3 different channels of feed distribution.",
+        "choices": [
+            "Manufacturer → distributor → farm; Cooperative supply; Retail store",
+            "Only local store",
+            "Direct mail only",
+            "Manufacturer → consumer only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "List 7 factors that influence the nutrient requirements of animals.",
+        "choices": [
+            "Species, age, sex, body weight, growth rate, lactation/milk production, activity level",
+            "Color, eye size, fur type, ear length, tail length, breed, coat shine",
+            "Temperature only",
+            "Housing type only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define minimum requirement, RDA, EAR, and tolerable upper intake level.",
+        "choices": [
+            "Minimum: lowest to avoid deficiency; RDA: meets needs of most; EAR: meets needs of 50%; UL: max safe intake",
+            "Minimum: max feed; RDA: min feed; EAR: avg feed; UL: unsafe feed",
+            "Minimum: protein only; RDA: vitamins only; EAR: minerals only; UL: fat only",
+            "All same, no difference"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Differences between empirical and mechanistic nutritional models, and their purpose.",
+        "choices": [
+            "Empirical: based on observed data, simple prediction; Mechanistic: based on biological mechanisms, complex simulations",
+            "Empirical: theoretical; Mechanistic: experimental",
+            "Both are observational only",
+            "No difference"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Difference between steady state and dynamic models.",
+        "choices": [
+            "Steady state: constant over time; Dynamic: changes with time",
+            "Steady state: uses only protein; Dynamic: uses only energy",
+            "No difference",
+            "Steady state: only animals; Dynamic: only plants"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What does LCA stand for in environmental models?",
+        "choices": [
+            "Life Cycle Assessment",
+            "Livestock Carbon Analysis",
+            "Land Conservation Assessment",
+            "Low Carbon Agriculture"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Define circularity, efficiency, and harmony in livestock sustainability context.",
+        "choices": [
+            "Circularity: resource reuse; Efficiency: max output per input; Harmony: balance with environment",
+            "Circularity: feed rotation; Efficiency: milk production; Harmony: color of animals",
+            "All same meaning",
+            "Circularity: nutrient intake; Efficiency: water use; Harmony: animal welfare only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Equation used to calculate environmental footprint.",
+        "choices": [
+            "Environmental footprint = Resource input + GHG emissions + waste output",
+            "Environmental footprint = Feed cost only",
+            "Environmental footprint = Animal weight only",
+            "Environmental footprint = Land area only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Name 4 feed production processes that cause greenhouse gas emissions.",
+        "choices": [
+            "Fertilizer production, feed processing, transport, storage",
+            "Feeding, drinking, grazing, resting",
+            "Hay cutting, mowing, planting, harvesting only",
+            "None of the above"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Two major approaches to reduce methane emissions due to enteric fermentation.",
+        "choices": [
+            "Feed additives (ionophores, fats), dietary formulation to increase digestibility",
+            "Increasing protein only",
+            "Reduce water intake",
+            "No mitigation possible"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Relationship between feed digestibility and methane emissions from manure.",
+        "choices": [
+            "Higher digestibility reduces undigested substrate, lowering methane emissions from manure",
+            "Higher digestibility increases methane from manure",
+            "Digestibility has no effect",
+            "Lower digestibility reduces methane from manure"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What is PM 2.5 and why is it important to livestock operations?",
+        "choices": [
+            "Fine particulate matter ≤2.5µm; affects animal respiratory health and worker safety",
+            "Vitamin requirement",
+            "Feed particle size",
+            "Water contamination only"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are nitrogen and phosphorus use efficiency and why do we care?",
+        "choices": [
+            "Proportion of N/P in feed retained in animal vs excreted; important for environmental impact and feed cost",
+            "Amount of N/P in soil only",
+            "Amount in water",
+            "No relevance"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Causes leading to excessive N and P excretion and how to reduce them.",
+        "choices": [
+            "Overfeeding, imbalanced diet; reduce via precise formulation, phase feeding, additives",
+            "Only water intake",
+            "Only feed particle size",
+            "Cannot be reduced"
+        ],
+        "correct": 0
+    }
+]
