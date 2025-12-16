@@ -668,17 +668,19 @@
         }
     </style>
 </head>
-<!-- SOUND EFFECTS -->
-<audio id="hoverSound" src="sounds/hover.wav" preload="auto"></audio>
-<audio id="correctSound" src="sounds/correct.wav" preload="auto"></audio>
-<audio id="wrongSound" src="sounds/wrong.wav" preload="auto"></audio>
-<audio id="confettiSound" src="sounds/confetti.wav" preload="auto"></audio>
-<audio id="toggleSound" src="sounds/toggle.wav" preload="auto"></audio>
-<audio id="endSound" src="sounds/win.wav" preload="auto"></audio>
-<audio id="bassSound" src="sounds/bass.mp3" preload="auto"></audio>
 
-<div id="settingsOverlay" class="overlay hidden">
-    <div style="
+<body>
+    <!-- SOUND EFFECTS -->
+    <audio id="hoverSound" src="sounds/hover.wav" preload="auto"></audio>
+    <audio id="correctSound" src="sounds/correct.wav" preload="auto"></audio>
+    <audio id="wrongSound" src="sounds/wrong.wav" preload="auto"></audio>
+    <audio id="confettiSound" src="sounds/confetti.wav" preload="auto"></audio>
+    <audio id="toggleSound" src="sounds/toggle.wav" preload="auto"></audio>
+    <audio id="endSound" src="sounds/win.wav" preload="auto"></audio>
+    <audio id="bassSound" src="sounds/bass.mp3" preload="auto"></audio>
+
+    <div id="settingsOverlay" class="overlay hidden">
+        <div style="
         background:#111;
         padding:30px;
         border-radius:16px;
@@ -686,54 +688,60 @@
         text-align:left;
         font-size:14px;
     ">
-        <h2 style="text-align:center;margin-top:0;">Settings</h2>
+            <h2 style="text-align:center;margin-top:0;">Settings</h2>
 
-        <label>
-            <input type="checkbox" id="hideMascots">
-            Hide Mascots
-        </label><br><br>
+            <label>
+                <input type="checkbox" id="hideMascots">
+                Hide Mascots
+            </label><br><br>
 
-        <label>
-            Hypermode Timer (seconds)
-            <input type="number" id="hyperTime" min="1" max="10" value="3" style="width:100%;margin-top:4px;">
-        </label><br><br>
+            <label>
+                Hypermode Time (seconds)
+                <input type="number" id="hyperTime" min="1" max="10" value="3" style="width:100%;margin-top:4px;">
+            </label><br><br>
 
-        <label>
-            <input type="checkbox" id="darkMode">
-            Dark Mode (Non-Hyper)
-        </label><br><br>
+            <label>
+                <input type="checkbox" id="darkMode">
+                Dark Mode (Non-Hyper)
+            </label><br><br>
 
-        <label>
-            <input type="checkbox" id="lockinMode">
-            Lock-In Mode
-        </label><br><br>
+            <label>
+                <input type="checkbox" id="lockinMode">
+                Lock-In Mode
+            </label><br><br>
 
-        <label>
-            <input type="checkbox" id="hideAchievements">
-            Hide Achievements Ticker
-        </label><br><br>
+            <label>
+                <input type="checkbox" id="hideAchievements">
+                Hide Achievements Ticker
+            </label><br><br>
 
-        <label>
-            Theme (Must unlock from achievements!)
-            <select id="themeSelect">
-                <option value="default">Default Theme</option>
-            </select>
-        </label><br><br>
+            <label>
+                Theme (Must unlock from achievements!)
+                <select id="themeSelect">
+                    <option value="default">Default Theme</option>
+                </select>
+            </label><br><br>
+
+            <label>
+                <input type="checkbox" id="voiceMode">
+                Voice Mode
+            </label><br><br>
 
 
-        <button id="closeSettings" style="
+
+            <button id="closeSettings" style="
                 width:100%;
                 padding:10px;
                 border:none;
                 border-radius:999px;
                 background:linear-gradient(45deg,#ff00ff,#00ffff);
                 cursor:pointer;">
-            Done
-        </button>
+                Done
+            </button>
+        </div>
     </div>
-</div>
-<div id="controlDrawer" class="overlay hidden">
-    <div style="
+    <div id="controlDrawer" class="overlay hidden">
+        <div style="
     background:#111;
     padding:30px;
     border-radius:16px;
@@ -741,11 +749,11 @@
     text-align:left;
     font-size:14px;
   ">
-        <h2 style="text-align:center;margin-top:0;">Game Controls</h2>
+            <h2 style="text-align:center;margin-top:0;">Game Controls</h2>
 
-        <label>
-            Deck
-            <select id="drawerDeckSelect" style="
+            <label>
+                Deck
+                <select id="drawerDeckSelect" style="
         width:100%;
         padding:10px;
         margin-top:6px;
@@ -753,53 +761,53 @@
         border:none;
         font-weight:bold;
       ">
-                <!-- populated by JS -->
-            </select>
-        </label>
-
-        <br><br>
-
-        <hr style="opacity:0.2;margin:16px 0;">
-
-        <div style="font-weight:bold;margin-bottom:6px;">Question Types</div>
-
-        <label>
-            <input type="checkbox" id="typeMC" checked>
-            Multiple Choice
-        </label><br>
-
-        <label>
-            <input type="checkbox" id="typeTyped">
-            Typed Answer
-        </label><br>
-
-        <label>
-            <input type="checkbox" id="typeTF">
-            True / False
-        </label>
-
-
-        <div class="mode-toggle">
-            <span class="mode-label">Normal</span>
-
-            <label class="bubble-switch">
-                <input type="checkbox" id="drawerEndlessToggle">
-                <span class="slider"></span>
+                    <!-- populated by JS -->
+                </select>
             </label>
 
-            <span class="mode-label">Endless</span>
+            <br><br>
 
-            <label class="bubble-switch">
-                <input type="checkbox" id="drawerHyperToggle">
-                <span class="slider"></span>
+            <hr style="opacity:0.2;margin:16px 0;">
+
+            <div style="font-weight:bold;margin-bottom:6px;">Question Types</div>
+
+            <label>
+                <input type="checkbox" id="typeMC" checked>
+                Multiple Choice
+            </label><br>
+
+            <label>
+                <input type="checkbox" id="typeTyped">
+                Typed Answer
+            </label><br>
+
+            <label>
+                <input type="checkbox" id="typeTF">
+                True / False
             </label>
 
-            <span class="mode-label">Hyper</span>
-        </div>
 
-        <br>
+            <div class="mode-toggle">
+                <span class="mode-label">Normal</span>
 
-        <button id="drawerFullscreenBtn" style="
+                <label class="bubble-switch">
+                    <input type="checkbox" id="drawerEndlessToggle">
+                    <span class="slider"></span>
+                </label>
+
+                <span class="mode-label">Endless</span>
+
+                <label class="bubble-switch">
+                    <input type="checkbox" id="drawerHyperToggle">
+                    <span class="slider"></span>
+                </label>
+
+                <span class="mode-label">Hyper</span>
+            </div>
+
+            <br>
+
+            <button id="drawerFullscreenBtn" style="
       width:100%;
       padding:10px;
       border:none;
@@ -808,12 +816,12 @@
       font-weight:bold;
       cursor:pointer;
     ">
-            ⛶ Fullscreen
-        </button>
+                ⛶ Fullscreen
+            </button>
 
-        <br><br>
+            <br><br>
 
-        <button id="closeDrawer" style="
+            <button id="closeDrawer" style="
       width:100%;
       padding:10px;
       border:none;
@@ -821,13 +829,13 @@
       background:linear-gradient(45deg,#ff00ff,#00ffff);
       cursor:pointer;
     ">
-            Done
-        </button>
+                Done
+            </button>
+        </div>
     </div>
-</div>
 
-<div id="achievementPopup" class="overlay hidden">
-    <div style="
+    <div id="achievementPopup" class="overlay hidden">
+        <div style="
     background:#111;
     padding:40px;
     border-radius:20px;
@@ -835,13 +843,28 @@
     box-shadow:0 0 40px gold;
     animation: popIn 0.4s ease-out;
   ">
-        <div style="font-size:5rem;">🏆</div>
-        <div id="achievementTitle" style="font-size:1.8rem;margin-top:10px;"></div>
-        <div id="achievementDesc" style="font-size:1rem;opacity:0.85;margin-top:6px;"></div>
+            <div style="font-size:5rem;">🏆</div>
+            <div id="achievementTitle" style="font-size:1.8rem;margin-top:10px;"></div>
+            <div id="achievementDesc" style="font-size:1rem;opacity:0.85;margin-top:6px;"></div>
+        </div>
     </div>
-</div>
-
-<body>
+    <div id="replayOverlay" class="overlay hidden" style="position: absolute; top: 0;">
+        <div style="background:#111;padding:20px;border-radius:16px;width:90%;max-width:800px;">
+            <h2 style="font-size: 3rem;">Session Replay</h2>
+            <canvas id="speedChart" width="720px" height="360px"></canvas>
+            <div id="answerTimeline"></div>
+            <button onclick="closeReplay()" style="
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+  margin-bottom:20px;
+  border-radius:999px;
+  border:none;
+  background: #F56217;
+  cursor:pointer;
+  font-weight:bold;">Done</button>
+        </div>
+    </div>
     <div class="snoopy"><img
             src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWZ1cjU5ZnJ6cThjcjc2YWxoZmJsZXh2Z2xxOGZjbGlsaG42YWtjNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rgq4Sar77s85W/giphy.gif"
             alt="" width=200px></div>
@@ -893,6 +916,16 @@
   font-weight:bold;">
             🔁 Retry Missed Questions
         </button>
+        <button id="replayBtn" class="hidden" style="
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+  margin-bottom:10px;
+  border-radius:999px;
+  border:none;
+  background: #F56217;
+  cursor:pointer;
+  font-weight:bold;">📊 Session Replay</button>
 
         <div id="hud">
             <span id="hudLeft">Q 1 • 0 pts</span>
@@ -964,7 +997,6 @@
                 value: "questions/AnimalNutritionFinalFocused.json"
             }
         ];
-
         const MAX_STREAK_FOR_FULL = 10;
         let quizMode = 'normal';      // normal | endless | hyper
         let answerTypeConfig = {
@@ -982,6 +1014,7 @@
         let answerStartTime = 0;
         let recentResults = []; // true/false history
         let sessionStart = Date.now();
+        let sessionReplay = [];
 
         const LOAD_DECAY = 0.92; // recovery rate
 
@@ -1054,7 +1087,8 @@
             darkMode: false,
             lockinMode: false,
             hideAchievements: false,
-            theme: "default"
+            theme: "default",
+            voiceMode: false
         };
 
         let unlockedAchievements = JSON.parse(localStorage.getItem(ACHIEVEMENTS_KEY)) || {};
@@ -1092,16 +1126,153 @@
 
         // Helpers
 
+        function speak(text, rate = 1, pitch = 1) {
+            if (!settings.voiceMode) return;
+            const msg = new SpeechSynthesisUtterance(text);
+            msg.rate = rate;
+            msg.pitch = pitch;
+            speechSynthesis.cancel();
+            speechSynthesis.speak(msg);
+        }
+
+
+        function openReplay() {
+            const data = JSON.parse(localStorage.getItem('pahootLastSession'));
+            if (!data) return;
+
+            drawSpeedGraph(
+                document.getElementById('speedChart'),
+                data
+            );
+            renderTimeline(data);
+
+            document.getElementById('replayOverlay').classList.remove('hidden');
+        }
+
+        function closeReplay() {
+            document.getElementById('replayOverlay').classList.add('hidden');
+        }
+
+
+        function drawSpeedGraph(canvas, data) {
+            const ctx = canvas.getContext('2d');
+            const padding = 40; // space for axes
+            const width = canvas.width;
+            const height = canvas.height;
+
+            ctx.fillStyle = 'white';
+            ctx.font = '20px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'top';
+            ctx.fillText('Speed vs. Question', width / 2, 10);
+
+            ctx.clearRect(0, 0, width, height);
+
+            // Determine max response time for scaling
+            const max = Math.max(...data.map(d => d.responseTime));
+
+            // Draw axes
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = 2;
+
+            // Y-axis
+            ctx.beginPath();
+            ctx.moveTo(padding, padding);
+            ctx.lineTo(padding, height - padding);
+            ctx.stroke();
+
+            // X-axis
+            ctx.beginPath();
+            ctx.moveTo(padding, height - padding);
+            ctx.lineTo(width - padding, height - padding);
+            ctx.stroke();
+
+            // Draw Y-axis labels (optional: 5 ticks)
+            ctx.fillStyle = 'white';
+            ctx.font = '12px sans-serif';
+            ctx.textAlign = 'right';
+            ctx.textBaseline = 'middle';
+            const numTicks = 5;
+            for (let i = 0; i <= numTicks; i++) {
+                const y = padding + (height - 2 * padding) * i / numTicks;
+                const value = Math.round(max * (1 - i / numTicks));
+                ctx.fillText(value, padding - 5, y);
+                // Optional: draw horizontal grid line
+                ctx.strokeStyle = 'rgba(255,255,255,0.2)';
+                ctx.beginPath();
+                ctx.moveTo(padding, y);
+                ctx.lineTo(width - padding, y);
+                ctx.stroke();
+            }
+
+            // Draw the line chart
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+
+            data.forEach((d, i) => {
+                const x = padding + (i * (width - 2 * padding) / (data.length - 1));
+                const y = height - padding - (d.responseTime / max) * (height - 2 * padding);
+                if (i === 0) {
+                    ctx.moveTo(x, y);
+                } else {
+                    ctx.lineTo(x, y);
+                }
+            });
+
+            ctx.stroke();
+
+            // Optional: draw points
+            ctx.fillStyle = 'white';
+            data.forEach((d, i) => {
+                const x = padding + (i * (width - 2 * padding) / (data.length - 1));
+                const y = height - padding - (d.responseTime / max) * (height - 2 * padding);
+                ctx.beginPath();
+                ctx.arc(x, y, 3, 0, 2 * Math.PI);
+                ctx.fill();
+            });
+        }
+
+
+
+        function renderTimeline(data) {
+            const el = document.getElementById('answerTimeline');
+            el.innerHTML = '';
+
+            data.forEach(d => {
+                const row = document.createElement('div');
+                row.style.fontSize = "2rem";
+                row.textContent =
+                    `${d.correct ? '✅' : '❌'} ${d.responseTime.toFixed(2)}s`;
+                el.appendChild(row);
+            });
+        }
+
+
         function endQuiz() {
             if (wrongQuestions.length === 0) {
                 unlockAchievement('perfect_deck');
             }
+
+            localStorage.setItem(
+                'pahootLastSession',
+                JSON.stringify(sessionReplay)
+            );
+            localStorage.setItem(
+                'pahootSessionHistory',
+                JSON.stringify([
+                    ...(JSON.parse(localStorage.getItem('pahootSessionHistory')) || []),
+                    sessionReplay
+                ].slice(-10)) // keep last 10
+            );
+
 
             playSound('endSound');
             document.querySelector('.answers').classList.add('hidden');
             document.getElementById('question').textContent = 'Quiz Finished!';
             document.getElementById('hudLeft').classList.add('hidden');
             document.getElementById('hudMeters').classList.add('hidden');
+            document.getElementById('replayBtn').classList.toggle('hidden');
 
             const result = document.getElementById('result');
             result.textContent = `Final Score: ${score} / ${questions.length}`;
@@ -1415,6 +1586,8 @@
 
 
         function updateStreakMeter() {
+            if (streak === 5) speak("You're on fire!", 1.2);
+            if (streak === 10) speak("Unstoppable!", 1.2);
             document.querySelector('.mini.streak').style.setProperty('--fill', streak / 10 * 100 + '%');
         }
 
@@ -1453,6 +1626,7 @@
             document.getElementById('lockinMode').checked = settings.lockinMode;
             document.getElementById('hideAchievements').checked = settings.hideAchievements;
             document.getElementById('themeSelect').value = settings.theme;
+            document.getElementById('voiceMode').checked = settings.voiceMode;
 
         }
 
@@ -1460,10 +1634,12 @@
             settings.hideMascots = document.getElementById('hideMascots').checked;
             settings.hyperTime = document.getElementById('hyperTime').value;
             settings.darkMode = document.getElementById('darkMode').checked;
-            settings.lockinMode = document.getElementById('lockinMode').checked
+            settings.lockinMode = document.getElementById('lockinMode').checked;
             settings.hideAchievements = document.getElementById('hideAchievements').checked;
             settings.theme = document.getElementById('themeSelect').value;
             localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
+            settings.voiceMode = document.getElementById("voiceMode").checked;
+
             applySettings();
         }
 
@@ -1538,6 +1714,10 @@
 
 
                 timerEl.textContent = `⏱ ${timeLeft.toFixed(1)}`;
+                if (hyperMode && timeLeft < 1.5 && timeLeft > 1.4) {
+                    speak("HURRY UP", 1.5, 1.8);
+                }
+
 
                 if (timeLeft <= 0) {
                     document.body.classList.add('screen-tear');
@@ -1561,6 +1741,12 @@
 
             resetGame({ resetScore: true });
             showQuestion();
+        }
+
+        document.getElementById('replayBtn').onclick = () => {
+            playSound('toggleSound');
+
+            openReplay();
         }
 
         document.getElementById('retryMissedBtn').onclick = () => {
@@ -1607,6 +1793,7 @@
         };
 
         document.getElementById('drawerEndlessToggle').onchange = e => {
+            let sessionReplay = [];
             endlessMode = e.target.checked;
 
             if (!endlessMode) {
@@ -1711,6 +1898,7 @@
         }
 
         function showQuestion() {
+            answerStartTime = performance.now();
             updateHUD();
 
             if (current >= questions.length) {
@@ -1732,6 +1920,9 @@
             document.getElementById('question').textContent = q.question;
 
             clearInterval(timerInterval);
+
+            speak(q.question, hyperMode ? 2 : 1);
+
 
             if (hyperMode) {
                 startTimer();
@@ -1815,7 +2006,7 @@
                 score++;
                 streak++;
                 updateStreakMeter();
-                playSound('confettiSound');
+                // playSound('confettiSound');
                 showConfetti();
                 if (score === 1) unlockAchievement('first_correct');
                 if (streak === 5) unlockAchievement('streak_5');
@@ -1841,6 +2032,16 @@
             }
 
             setTimeout(() => {
+                sessionReplay.push({
+                    index: current,
+                    question: questions[current].question,
+                    correct: isCorrect,
+                    responseTime: (performance.now() - answerStartTime) / 1000,
+                    cognitiveLoad: cognitiveLoad,
+                    streakAtAnswer: streak,
+                    mode: hyperMode ? 'hyper' : endlessMode ? 'endless' : 'normal',
+                    timestamp: Date.now()
+                });
                 current++;
                 showQuestion();
             }, isCorrect ? 3000 : 2000);
@@ -1868,6 +2069,16 @@
             updateStreakMeter();
 
             setTimeout(() => {
+                sessionReplay.push({
+                    index: current,
+                    question: questions[current].question,
+                    correct: isCorrect,
+                    responseTime: (performance.now() - answerStartTime) / 1000,
+                    cognitiveLoad: cognitiveLoad,
+                    streakAtAnswer: streak,
+                    mode: hyperMode ? 'hyper' : endlessMode ? 'endless' : 'normal',
+                    timestamp: Date.now()
+                });
                 current++;
                 showQuestion();
             }, 1800);
