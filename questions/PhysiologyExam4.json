@@ -1,0 +1,632 @@
+[
+    {
+        "question": "Hypothalamus",
+        "choices": [
+            "Production of ADH, oxytcin, and regulatory hormones",
+            "Melatonin",
+            "Epinephrine and norepinephrine",
+            "Androgens"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Pineal Gland",
+        "choices": [
+            "Melatonin",
+            "ANP and BNP",
+            "Leptin, resistin",
+            "Insulin, glucagon"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Parathyroid Glands",
+        "choices": [
+            "PTH",
+            "Thyroxine, triiodothyronine, calcitonin",
+            "Thymosins",
+            "Insulin, glucagon"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Pituitary gland",
+        "choices": [
+            "Anterior: ACTH, TSH, GH, PRL, FSH, LH, and MSH; Poserior: Release of oxytocin and ADH",
+            "Renin and erythropoietin",
+            "Leptin, resistin",
+            "Insulin, glucagon"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Heart",
+        "choices": [
+            "ANP and BNP",
+            "Leptin, resistin",
+            "Thyroxine, triiodothyronine, calcitonin",
+            "Insulin, glucagon"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Thyroid Gland",
+        "choices": [
+            "Thyroxine, triiodothyronine, calcitonin",
+            "Leptin, resistin",
+            "Insulin, glucagon",
+            "Epinephrine and norepinephrine"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Kidney",
+        "choices": [
+            "Renin, erythropoietin, and calcitriol",
+            "Insulin, glucagon",
+            "Epinephrine and norepinephrine",
+            "Thyroxine, triiodothyronine, calcitonin"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Thymus",
+        "choices": [
+            "Thymosins",
+            "Thyroxine, triiodothyronine, calcitonin",
+            "Insulin, glucagon",
+            "Leptin, resistin"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Aidopse Tissue",
+        "choices": [
+            "Leptin, resistin",
+            "Insulin, glucagon",
+            "Melatonin",
+            "ANP and BNP"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Adrenal Glands",
+        "choices": [
+            "Adrenal Medulla: Epinephrine and norepinephrine; Adrenal Cortex: Cortisol, corticosterone, aldosterone, androgens",
+            "Insulin, glucagon",
+            "Thyroxine, triiodothyronine, calcitonin",
+            "Epinephrine and norepinephrine"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Pancreatic Islets",
+        "choices": [
+            "Insulin, glucagon",
+            "Leptin, resistin",
+            "Androgens",
+            "Estrogens"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Gonads (lol)",
+        "choices": [
+            "Testes: Androgens, inhibin; Ovaries: Estrogens, progestins, inhibin",
+            "Androgens",
+            "Estrogens",
+            "Insulin, glucagon"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Where are AVP2 receptors located?",
+        "choices": [
+            "Distal tubule, collecting duct",
+            "Philtrum",
+            "Glabella",
+            "Lunula, purlicue"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What does arginine vasopressin do?",
+        "choices": [
+            "Inserts aquaporin channels and promotes water reabsorption, allows for the formation of concentrated urine",
+            "Stimulates insulin release from pancreatic β-cells",
+            "Causes bronchodilation in the lungs",
+            "Inhibits water reabsorption in the collecting ducts"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Oxytocin is released from which part of the pituitary gland?",
+        "choices": [
+            "Anterior pituitary",
+            "Posterior pituitary",
+            "Adrenal cortex",
+            "Thyroid gland"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "Oxytocin is primarily involved in which physiological process?",
+        "choices": [
+            "Regulation of blood glucose",
+            "Labor and birth",
+            "Water reabsorption in the kidney",
+            "Stress hormone release"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "The release of oxytocin during labor operates via which mechanism?",
+        "choices": [
+            "Negative feedback inhibition",
+            "Positive feedback",
+            "Endocrine antagonism",
+            "Circadian rhythm control"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "Which hormone is paired with oxytocin as a posterior pituitary hormone?",
+        "choices": [
+            "Prolactin",
+            "Arginine vasopressin (AVP)",
+            "Growth hormone",
+            "Thyroid-stimulating hormone"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "Oxytocin secretion increases in response to which event during birth?",
+        "choices": [
+            "Decreased blood osmolarity",
+            "Uterine contractions",
+            "Low blood glucose levels",
+            "Reduced cortisol secretion"
+        ],
+        "correct": 1
+    },
+    {
+        "question": "TSH",
+        "choices": [
+            "Releases thyroid hormones",
+            "Stimulates insulin secretion from the pancreas",
+            "Increases calcium absorption in the intestines",
+            "Promotes the release of adrenaline from the adrenal medulla"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "ACTH",
+        "choices": [
+            "Stimulates the release of glucocorticoids by the adrenal gland",
+            "Stimulates insulin secretion from the pancreas",
+            "Promotes thyroid hormone release from the thyroid gland",
+            "Directly stimulates red blood cell production in the bone marrow"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "FSH",
+        "choices": [
+            "Stimulates follicle development and estrogen secretion in females and sperm production in males",
+            "Stimulates milk production in the mammary glands",
+            "Directly increases metabolic rate in muscles",
+            "Triggers ovulation in females"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "LH",
+        "choices": [
+            "Causes ovulation and progestin production in females and androgen production in males",
+            "Enhances calcium absorption in the intestines",
+            "Promotes thyroid hormone release from the thyroid gland",
+            "Stimulates insulin secretion from the pancreas"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "PRL",
+        "choices": [
+            "Stimulates the development of mammary glands and milk production",
+            "Promotes ovulation in females",
+            "Stimulates cortisol release from the adrenal cortex",
+            "Stimulates thyroid hormone production"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "GH",
+        "choices": [
+            "Cell growth and replication via insulin-like growth factors",
+            "Stimulates thyroid hormone release from the thyroid gland",
+            "Directly increases insulin secretion from the pancreas",
+            "Enhances calcium absorption in the intestines"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What are two hormones involved in the stress response?",
+        "choices": [
+            "Cortisol and epinephrine",
+            "Serotonin and ATP",
+            "ATP and VIP",
+            "Acetylcholine and dopamine"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "This disease is a result of insufficient production of aldosterone:",
+        "choices": [
+            "Addison's disease",
+            "Conn's disease",
+            "Pituitary dwarfism",
+            "Cushing's disease"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Main layers of intestines",
+        "choices": [
+            "Muscosa, submucosa, circular smooth muscle, logitudnal muscle",
+            "Endocardium, myocardium, pericardium",
+            "Pia mater, arachnoid mater, dura mater",
+            "Epidermis, dermis, hypodermis"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Microvilli:",
+        "choices": [
+            "fringe the villi to further increase surface area.",
+            "produce hormones for digestion",
+            "absorb oxygen from the bloodstream",
+            "pump blood through capillaries"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Peristalsis:",
+        "choices": [
+            "slow wave contraction that moves food down the GI tract",
+            "storage of bile in the gallbladder",
+            "secretion of digestive enzymes",
+            "filtering toxins from the blood"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Proteases",
+        "choices": [
+            "break down protiens into shorter polypeptides",
+            "break down polysaccharides into oligosaccharides",
+            "release fatty acids from triglycerides and phospholipids",
+            "break down DNA into nucleotides"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Amylases",
+        "choices": [
+            "break down polysaccharides into oligosaccharides",
+            "break down protiens into shorter polypeptides",
+            "release fatty acids from triglycerides and phospholipids",
+            "break down DNA into nucleotides"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Lipases",
+        "choices": [
+            "release fatty acids from triglycerides and phospholipids",
+            "break down DNA into nucleotides",
+            "break down protiens into shorter polypeptides",
+            "break down polysaccharides into oligosaccharides"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Nucleases",
+        "choices": [
+            "break down DNA into nucleotides",
+            "break down polysaccharides into oligosaccharides",
+            "break down protiens into shorter polypeptides",
+            "release fatty acids from triglycerides and phospholipids"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Trypsinogen active form?",
+        "choices": [
+            "Trypsin",
+            "Trypsine",
+            "Trypesin",
+            "Tripsin"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "CCK stimulates what?",
+        "choices": [
+            "gallbladder, which responds by contracting and delivering more bile to the duodenum",
+            "sphincter of oddi, which responds by relaxing and increases bile flow into the duodenum",
+            "duodenum, and increases secretion of fatty acids",
+            "common bile duct, increases secretion of fatty acids"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Tight junctions",
+        "choices": [
+            "prevent leakage",
+            "secrete mucous",
+            "secrete the acid HCL",
+            "secrete the protease pepsin"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Mucous neck cells",
+        "choices": [
+            "secrete mucous",
+            "secrete the acid HCL",
+            "secrete the protease pepsin",
+            "secrete hormones into the blood"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Parietal cells",
+        "choices": [
+            "secrete the acid HCL",
+            "secrete the protease pepsin",
+            "secrete hormones into the blood",
+            "prevent leakage"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Chief cells",
+        "choices": [
+            "secrete the protease pepsin",
+            "secrete hormones into the blood",
+            "prevent leakage",
+            "secrete mucous"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Enteroendrocine cells",
+        "choices": [
+            "secrete hormones into the blood",
+            "prevent leakage",
+            "secrete mucous",
+            "secrete the acid HCL"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "What controls the passage of food from one compartment to the next?",
+        "choices": [
+            "Muscular Valves (Sphincters)",
+            "Soo locks",
+            "Portes",
+            "Terminals"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "ACTH/CRH Disease",
+        "choices": [
+            "Cushing's, Addison's",
+            "Hyper- and hypo- parathyroidism",
+            "Type 1/2 diabetes",
+            "Hypoglycemia"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "TRH/TSH Disease",
+        "choices": [
+            "Hyper- and hypo- thyroidism",
+            "Hyper- and hypo- parathyroidism",
+            "Type 1/2 diabetes",
+            "Hypoglycemia"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "GnRH/FSH Disease",
+        "choices": [
+            "Infertility",
+            "Type 1/2 diabetes",
+            "Hypoglycemia",
+            "Heart Failure"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "GnRH/LH Disease",
+        "choices": [
+            "Infertility, hypogonadotropic hypogonadism",
+            "Type 1/2 diabetes",
+            "Heart Failure",
+            "Hypoglycemia"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "PRH/Prolactin Disease",
+        "choices": [
+            "Hyperprolectinemia",
+            "Hypercalcemia",
+            "Heart Failure",
+            "Type 1/2 diabetes"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "GHRH/GH Disease",
+        "choices": [
+            "Gigantism, dwarfism, acromegaly",
+            "Type 1/2 diabetes",
+            "Heart Failure",
+            "Hypercalcemia"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "ADH Disease",
+        "choices": [
+            "Diebetas insipidus",
+            "Type 1/2 diabetes",
+            "Heart Failure",
+            "Hypercalcemia"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Oxytocin Disease",
+        "choices": [
+            "Labor complications",
+            "Infertility",
+            "Heart Failure",
+            "Whoism"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "T3 Disease",
+        "choices": [
+            "Hyper- and hypo- thyroidism",
+            "Hypercalcemia",
+            "Type 1/2 diabetes",
+            "Whoism"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Thyroxine Disease",
+        "choices": [
+            "Hyper- and hypo- thyroidism",
+            "Whoism",
+            "Whoism",
+            "Hyper- and hypo- parathyroidism"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Calcitonin Disease",
+        "choices": [
+            "Hypercalcemia",
+            "Non Hodgkins Lymphoma",
+            "Ligma",
+            "John Hopkins disease"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Cortisol Disease",
+        "choices": [
+            "Cushing's, Addison's",
+            "Hypoglycemia",
+            "Hyperligmatic syndrome",
+            "Whoism"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Aldosterone Disease",
+        "choices": [
+            "Hyperaldosteronism, Addison's",
+            "Hyposugmaticism",
+            "Whoism",
+            "Hypoglycemia"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Epinephrine Disease",
+        "choices": [
+            "Pheochromocytoma",
+            "De-ezterone nutsynchrosism",
+            "Whoism",
+            "Type 1/2 diabetes"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "PTH Disease",
+        "choices": [
+            "Hyper- and hypo- parathyroidism",
+            "Hyper- and hypo- thyroidism",
+            "Whoism",
+            "Type 1/2 diabetes"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "ANP Disease",
+        "choices": [
+            "Heart Failure",
+            "Type 1/2 diabetes",
+            "Hyper- and hypo- thyroidism",
+            "Hyper- and hypo- parathyroidism"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Renin Disease",
+        "choices": [
+            "Hypertension",
+            "Type 1/2 diabetes",
+            "Hyper- and hypo- parathyroidism",
+            "Hyper- and hypo- thyroidism"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Erythropoietin",
+        "choices": [
+            "Anemia of chronic kidney disease",
+            "Hypertension",
+            "Heart Failure",
+            "Type 1/2 diabetes"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Beta-islet cells target cells",
+        "choices": [
+            "liver, muscles",
+            "adipose",
+            "bone marrow",
+            "bone osteoclosts"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Insulin disease",
+        "choices": [
+            "Type 1/2 diabetes",
+            "Hypoglycemia",
+            "Non Hodgkins Lymphoma",
+            "Hypercalcemia"
+        ],
+        "correct": 0
+    },
+    {
+        "question": "Glucagon Disease",
+        "choices": [
+            "Hypoglycemia",
+            "Hyperglycemia",
+            "Heart Failure",
+            "Hypercalcemia"
+        ],
+        "correct": 0
+    }
+]
