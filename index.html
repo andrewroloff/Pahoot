@@ -39,6 +39,56 @@
             min-height: 100vh;
         }
 
+        .version-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: #0B486B;
+            background: linear-gradient(5deg,
+                    #0B486B, #F56217);
+            color: black;
+            font-weight: 900;
+            font-size: 13px;
+            cursor: pointer;
+            box-shadow: 0 0 12px rgba(255, 0, 255, 0.5);
+            margin: 0 auto 14px auto;
+            justify-content: center;
+        }
+
+        .version-badge:hover {
+            transform: scale(1.05);
+        }
+
+        .version-text {
+            opacity: 0.85;
+        }
+
+        .version-new {
+            background: black;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 999px;
+            font-size: 11px;
+            animation: pulseNew 1.2s infinite;
+        }
+
+        @keyframes pulseNew {
+            0% {
+                opacity: 0.7;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.7;
+            }
+        }
+
+
         /* themes */
 
         body.theme-eepy {
@@ -918,6 +968,11 @@
         text-align:left;
         font-size:14px;
     ">
+            <div class="version-badge" id="versionBadge">
+                <span class="version-text">v1.5</span>
+                <span class="version-new hidden" id="versionNew">NEW</span>
+            </div>
+
             <h2 style="text-align:center;margin-top:0;">Settings</h2>
 
             <label>
@@ -956,8 +1011,6 @@
                 <input type="checkbox" id="voiceMode">
                 Voice Mode
             </label><br><br>
-
-
 
             <button id="closeSettings" style="
                 width:100%;
@@ -1066,7 +1119,26 @@
             </button>
         </div>
     </div>
+    <div id="changelogOverlay" class="overlay hidden">
+        <div class="settings-panel">
+            <h2>📝 What’s New in v1.5</h2>
 
+            <ul class="changelog">
+                <li>Question memory stored (to be used later)</li>
+                <li>Changelog added</li>
+            </ul>
+
+            <button id="closeChangelog" style="
+                width:100%;
+                padding:10px;
+                border:none;
+                border-radius:999px;
+                background: #0B486B;
+                background: linear-gradient(5deg,
+                    #0B486B, #F56217);
+                cursor:pointer;">Got it</button>
+        </div>
+    </div>
     <div id="flashcardOverlay" class="overlay hidden">
         <div class="flashcard-container">
 
@@ -1343,7 +1415,6 @@
         let flashcards = [];
         let flashcardFlipped = false;
         const LOAD_DECAY = 0.92; // recovery rate
-
         const ACHIEVEMENTS = {
             first_correct: {
                 title: "First Blood",
@@ -1398,14 +1469,6 @@
             dev_mode: 'theme-matrix',
             eepy: 'theme-eepy'
         };
-
-
-
-        // local storage keys
-        const DECK_KEY = 'pahootDeck';
-        const SETTINGS_KEY = 'pahootSettings';
-        const ACHIEVEMENTS_KEY = 'pahootAchievements';
-        const THEMES_KEY = 'pahootThemes';
         let settings = {
             hideMascots: true,
             hyperTime: 5,
@@ -1416,8 +1479,20 @@
             voiceMode: false
         };
 
+
+        // local storage keys
+        const DECK_KEY = 'pahootDeck';
+        const SETTINGS_KEY = 'pahootSettings';
+        const ACHIEVEMENTS_KEY = 'pahootAchievements';
+        const THEMES_KEY = 'pahootThemes';
+        const VERSION = "1.5"; // ← update this every release
+        const HAS_VISITED_KEY = "pahoot_hasVisited";
+        const CHANGELOG_KEY_PREFIX = "pahoot_seenChangelog_";
+        const MEMORY_KEY = 'pahootMemory';
+
         let unlockedAchievements = JSON.parse(localStorage.getItem(ACHIEVEMENTS_KEY)) || {};
         let unlockedThemes = JSON.parse(localStorage.getItem(THEMES_KEY)) || {};
+        let memory = JSON.parse(localStorage.getItem(MEMORY_KEY)) || {};
 
         //dev_mode() function for loading the test deck
         window.dev_mode = function () {
@@ -1450,6 +1525,92 @@
         }
 
         // Helpers
+        function getDueQuestions(allQuestions) {
+            const now = Date.now();
+
+            return allQuestions.filter(q => {
+                const qid = `${currentDeck}::${q.question}`;
+                return !memory[qid] || memory[qid].due <= now;
+            });
+        }
+
+        function updateMemory(q, correct, responseTime) {
+            const qid = `${currentDeck}::${q.question}`;
+            const now = Date.now();
+
+            let m = memory[qid] || {
+                ease: 2.5,
+                interval: 1,
+                due: now,
+                lapses: 0
+            };
+
+            if (correct) {
+                m.ease = Math.max(1.3, m.ease + 0.1);
+                m.interval = Math.ceil(m.interval * m.ease);
+            } else {
+                m.ease = Math.max(1.3, m.ease - 0.3);
+                m.interval = 1;
+                m.lapses++;
+            }
+
+            // Slow answers count as partial failure
+            if (responseTime > 6) {
+                m.interval = Math.max(1, Math.floor(m.interval / 2));
+            }
+
+            m.due = now + m.interval * 86400000;
+            memory[qid] = m;
+
+            localStorage.setItem(MEMORY_KEY, JSON.stringify(memory));
+        }
+
+        function updateVersionBadge() {
+            const badge = document.getElementById("versionBadge");
+            const newTag = document.getElementById("versionNew");
+
+            if (!badge || !newTag) return;
+
+            const unseen =
+                localStorage.getItem(CHANGELOG_KEY_PREFIX + VERSION) !== "true";
+
+            newTag.classList.toggle("hidden", !unseen);
+        }
+
+        document.getElementById("versionBadge").onclick = () => {
+            playSound('toggleSound');
+            showChangelog();
+        };
+
+
+        document.getElementById("closeChangelog").onclick = () => {
+            playSound('toggleSound');
+            closeChangelog();
+        };
+
+        function showChangelog() {
+            document.getElementById("changelogOverlay")
+                .classList.remove("hidden");
+        }
+
+        function closeChangelog() {
+            document.getElementById("changelogOverlay")
+                .classList.add("hidden");
+
+            localStorage.setItem(
+                CHANGELOG_KEY_PREFIX + VERSION,
+                "true"
+            );
+        }
+
+        function shouldShowChangelog() {
+            const hasVisited = localStorage.getItem(HAS_VISITED_KEY);
+            const seenThisVersion =
+                localStorage.getItem(CHANGELOG_KEY_PREFIX + VERSION);
+
+            return hasVisited && !seenThisVersion;
+        }
+
 
         document.addEventListener('keydown', function (event) {
             if (flashcardMode) {
@@ -2183,6 +2344,7 @@
                     playSound('wrongSound');
                     const q = questions[current];
                     showWrong(q.choices[q.correct]);
+                    updateMemory(q, false, hyperTimeLimit);
                     setTimeout(() => {
                         current++;
                         showQuestion();
@@ -2308,6 +2470,35 @@
 
 
         document.addEventListener('DOMContentLoaded', () => {
+            detectLegacyVisit();
+            updateVersionBadge();
+
+
+            if (shouldShowChangelog()) {
+                showChangelog();
+            }
+
+            // Always mark that they've now visited
+            localStorage.setItem(HAS_VISITED_KEY, "true");
+
+            function detectLegacyVisit() {
+                if (localStorage.getItem(HAS_VISITED_KEY)) return;
+
+                // If ANY existing pahoot data exists → legacy user
+                const legacyKeys = [
+                    SETTINGS_KEY,
+                    DECK_KEY,
+                    ACHIEVEMENTS_KEY,
+                    THEMES_KEY
+                ];
+
+                const isLegacy = legacyKeys.some(k => localStorage.getItem(k));
+
+                if (isLegacy) {
+                    localStorage.setItem(HAS_VISITED_KEY, "true");
+                }
+            }
+
             // Deck
             const savedDeck = localStorage.getItem(DECK_KEY);
             currentDeck = DECKS.some(d => d.value === savedDeck)
@@ -2488,6 +2679,8 @@
                 showBiasWarning(bias);
             }
 
+            updateMemory(q, isCorrect, (performance.now() - answerStartTime) / 1000);
+
             setTimeout(() => {
                 sessionReplay.push({
                     index: current,
@@ -2524,6 +2717,9 @@
             }
 
             updateStreakMeter();
+
+            updateMemory(questions[current].question, correct, (performance.now() - answerStartTime) / 1000);
+
 
             setTimeout(() => {
                 sessionReplay.push({
